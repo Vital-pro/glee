@@ -1,7 +1,234 @@
 @import 'vars';  // переменные для цвета, шрифта и кусочки кода для @extend
 @import 'fonts'; 
 @import 'reset';
-@import 'global'; // общие стили для body, ссылок т.
+@import 'global'; // общие стили для body, title, ссылок т.д.
+
+// ------ header------------------
+
+.header {
+
+  &__container {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 144px;
+  }
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 0.8;
+    color: $link;
+    padding: 0 3px 2px 3px;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+    &:hover {
+      border-bottom: 1px solid $link;
+    }
+  }
+
+  &__link--active {
+    border-bottom: 1px solid $link;
+  }
+}
+
+.user-nav {
+
+  display: flex;
+  align-items: center;
+  & > *:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #fcd7b6;
+    padding: 10px 35px 10px 40px;
+    border-radius: 25px;
+  }
+
+  &__link-heart {
+    margin-right: 58px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 30px;
+      background-color: #fde7d3;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%
+      );
+    }
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -6px;
+    right: -8px;
+    text-align: center;
+    line-height: 16px;
+    @extend %dmsans-400;
+    color: #243f4d;
+    font-size: 10px;
+  }
+
+  &__link-cart {
+    position: relative;
+  }
+}
+
+// ---------footer----------
+
+.footer {
+
+  &__top {
+    padding: 75px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dae4e9;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $footer;
+  }
+
+  .footer__top-logo {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 25px;
+  }
+
+  &__top-address {
+    max-width: 200px;
+    font-style: normal;
+    line-height: 1.71;
+  }
+
+  &__top-phone,
+  &__top-email {
+    display: block;
+    text-transform: uppercase;
+    color: $footer;
+  }
+
+  &__top-phone {
+    margin: 20px 0 12px;
+  }
+
+  &__top-email {
+    & span {
+      text-transform: initial;
+    }
+  }
+
+  &__top-title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.31;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #1f2044;
+  }
+
+  &__top-list {
+    max-width: 120px;
+  }
+
+  &__top-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__top-link {
+    color: $footer;
+  }
+
+  &__top-text {
+    width: 270px;
+    margin-bottom: 40px;
+  }
+
+  &__top-input {
+    background-color: #fef7f0;
+    max-width: 170px;
+    height: 38px;
+    padding: 0 10px; 
+    &::placeholder {
+      @extend %dmsans-400;
+      font-size: 12px;
+      color: #234969;
+    } 
+  }
+
+  &__top-btn {
+    background-color: $accent;
+    cursor: pointer;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    height: 38px;
+    padding: 0px 18px 0px 16px;
+    margin-left: -4px;
+    transition: all .2s;
+    &:active {
+      transform: translateY(2px);
+      background-color: #7d96a4;
+    }
+  }
+
+  &__bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $footer;
+  }
+
+  &__bottom-menu {
+    display: flex;
+  }
+
+  &__bottom-item {
+    padding: 0 14px;
+    border-right: 2px solid $accent;
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+  &__bottom-limk {
+    color: $footer;
+    transition: color .8s;
+    &:hover{
+      color: $title3;
+    }
+  }
+}
+
 
 
 

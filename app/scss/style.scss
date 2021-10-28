@@ -27,21 +27,22 @@
   }
 
   &__link {
-    @extend %rubik-500;
-    font-weight: 600;
+    @extend %rubik-400;
     font-size: 15px;
-    line-height: 0.8;
+    line-height: 0.9;
     color: $link;
-    padding: 0 3px 2px 3px;
+    padding: 0 3px 2px;
     border-bottom: 1px solid transparent;
     transition: all .4s;
     &:hover {
       border-bottom: 1px solid $link;
+      text-shadow: 0 0 .65px $link, 0 0 .65px $link; 
     }
   }
 
   &__link--active {
     border-bottom: 1px solid $link;
+    text-shadow: 0 0 .65px $link, 0 0 .65px $link; 
   }
 }
 
@@ -105,6 +106,7 @@
   &__top {
     padding: 75px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid #dae4e9;
     @extend %rubik-400;

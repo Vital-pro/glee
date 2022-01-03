@@ -3,6 +3,7 @@ $tabs: #8b8b8b;    /*color tabs*/
 $accent: #a3bbc8;  /*color buttons*/
 $title3: #1a1a1a;   /*color title3*/ 
 $footer: #7b7b7b; 
+$black: #191919;
 
 %dmsans-400 {
   font-family: 'DMSans-Regular', sans-serif;
@@ -32,4 +33,18 @@ $footer: #7b7b7b;
 %rubik-500 {
   font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+
+%title-3 {
+  @extend %dmsans-700;
+  color: #191919;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+%tabs-3 {
+  @extend %dmsans-700;
+  color: $tabs;
+  font-size: 16px;
+  line-height: 1.5;
 }

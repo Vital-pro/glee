@@ -1,37 +1,37 @@
-$link: #436372;     /*color link*/
-$tabs: #8b8b8b;    /*color tabs*/
-$accent: #a3bbc8;  /*color buttons*/
-$title3: #1a1a1a;   /*color title3*/ 
-$footer: #7b7b7b; 
+$link: #436372; /*color link*/
+$tabs: #8b8b8b; /*color tabs*/
+$accent: #a3bbc8; /*color buttons*/
+$title3: #1a1a1a; /*color title3*/
+$footer: #7b7b7b;
 $black: #191919;
 
 %dmsans-400 {
-  font-family: 'DMSans-Regular', sans-serif;
+  font-family: "DMSans-Regular", sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: 'DMSans-Medium', sans-serif;
+  font-family: "DMSans-Medium", sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: 'DMSans-Bold', sans-serif;
+  font-family: "DMSans-Bold", sans-serif;
   font-weight: 700;
 }
 
 %poppins-700 {
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
 }
 
 %rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: "Rubik-Regular", sans-serif;
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
+  font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
 }
 
@@ -49,6 +49,13 @@ $black: #191919;
   line-height: 1.5;
 }
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+}
 
 // @function max($numbers...) {
 //   @return m#{a}x(#{$numbers});

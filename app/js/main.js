@@ -1,5 +1,18 @@
 $(function(){
 
+  $('.details-tabs__title').on('click', function(e){
+    e.preventDefault();
+    $('.details-tabs__title').removeClass('details-tabs__title--active');
+    $(this).addClass('details-tabs__title--active');
+
+    $('.details-tabs__content-item').removeClass('details-tabs__content-item--active');
+    $($(this).attr('href')).addClass('details-tabs__content-item--active');
+
+  });
+
+  // $('input, select').styler();
+  $('.select-style, .details-item__content-input').styler();
+
   $('.product-content__filter-btn').on('click', function () {
     $('.product-content__filter-btn').removeClass('product-content__filter-btn--active');
     $(this).addClass('product-content__filter-btn--active');
@@ -34,6 +47,29 @@ $(function(){
     // speed: 300,
     autoplaySpeed: 2000
   });
+
+  $('.details-slide__thumb').slick({
+    asNavFor: '.details-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+
+  $('.details-slide__big').slick({
+    asNavFor: '.details-slide__thumb',
+    draggable: false ,
+    arrows: false,
+    fade: true
+  });
+
+  $('.details-products__inner').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2
+  });
+
+
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",

@@ -43,6 +43,28 @@ body {
   object-fit: cover;
 }
 
+.btn {
+  display: block;
+  min-height: 50px;
+  padding: 15px 30px;
+  @extend %rubik-400;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $accent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover {
+    background-color: #99abb5;
+  }
+  &:active {
+    background-color: #51626d;
+    transform: translateY(3px);
+  }
+}
+
 // ----breadcrumbs------------------
 
 .page {
@@ -106,7 +128,6 @@ body {
   }
 }
 
-
 // ----Pagination------------------
 
 .pagination {
@@ -136,10 +157,9 @@ body {
   .pagination__item:last-child {
     width: 72px;
   }
-  
+
   &__link {
     padding: 20px;
     color: inherit;
   }
 }
-

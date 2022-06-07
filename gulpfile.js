@@ -1,10 +1,11 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss          = require('gulp-sass')(require('sass'));
+const scss          = require('gulp-sass');
 const concat        = require('gulp-concat');
 const autoprefixer  = require('gulp-autoprefixer');
 const uglify        = require('gulp-uglify');
 const imagemin      = require('gulp-imagemin');
+const fileInclude   = require('gulp-file-include');
 const del           = require('del');
 const browserSync   = require('browser-sync').create();
 
@@ -12,8 +13,22 @@ function browsersync() {
   browserSync.init({
     server: {
       baseDir: "app/"
-    }
+    },
+    // notify: false,
+    // если нужно работать без internet wi-fi, то укажем online: false
+    online: true
   })
+}
+
+
+function html() {
+  return src('dist/*.html')
+    .pipe(fileInclude({
+      prefix: '@',
+      basepath: '@file'
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream()) 
 }
 
 
@@ -46,7 +61,6 @@ function scripts() {
   .pipe(browserSync.stream())
 }
 
-
 function images() {
   return src('app/images/**/*.*')
   .pipe(imagemin([
@@ -77,17 +91,19 @@ function cleanDist() {
 }
 
 function watching() {
+  watch(['app/_chunk/**/*.html'], html);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
-exports.styles  = styles;
-exports.scripts = scripts;
+exports.html        = html;
+exports.styles      = styles;
+exports.scripts     = scripts;
 exports.browsersync = browsersync;
-exports.watching = watching;
-exports.images = images;
-exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);
+exports.watching    = watching;
+exports.images      = images;
+exports.cleanDist   = cleanDist;
+exports.build       = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(html, styles, scripts, browsersync, watching);

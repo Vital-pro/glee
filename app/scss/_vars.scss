@@ -57,9 +57,9 @@ $black: #191919;
   overflow: hidden;
 }
 
-// @function max($numbers...) {
-//   @return m#{a}x(#{$numbers});
-// }
-// @function min($numbers...) {
-//   @return m#{i}n(#{$numbers});
-// }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

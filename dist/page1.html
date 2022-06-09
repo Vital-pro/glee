@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glee</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('../app/_chunk/header.html')
+    @include('../app/_chunk/mobile_btn.html')
+
+    <main class="page">
+
+      <section class="page__top">
+        <div class="page__top-breadcrumbs breadcrumbs">
+          <div class="container">
+            <h2 class="breadcrumbs__title">
+              Contact
+            </h2>
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#!">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#!">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      @include('../app/_chunk/articles.html')     
+    
+      <div class="page__partners partners">
+        <div class="partners__container container">
+          @include('../app/_chunk/partners_list.html')
+        </div>
+      </div>
+      
+
+    </main>
+    @include('../app/_chunk/footer.html');
+    
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .container {
@@ -62,6 +62,55 @@ body {
   &:active {
     background-color: #51626d;
     transform: translateY(3px);
+  }
+}
+
+.link-btn {
+  background-image: url("../images/icons/arrow-btn.svg");
+  background-repeat: no-repeat;
+  background-position: 75% 54%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @extend %rubik-500;
+  font-size: 15px;
+  color: #fff;
+  min-height: 60px;
+  background-color: $accent;
+  padding: 0 100px 0 25px;
+  transition: background-position-x 0.5s, transform 0.5s,
+    background-color 0.2s;
+  &:hover {
+    background-position-x: 85%;
+  }
+  &:active {
+    transform: translateY(3px);
+    background-color: #7d96a4;
+  }
+}
+
+.link-btnTransparent {
+  background-image: url("../images/icons/arrow-btn-grey.svg");
+  background-repeat: no-repeat;
+  background-position: 75% 54%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @extend %rubik-500;
+  font-size: 15px;
+  color: $accent;
+  min-height: 60px;
+  border: 1px solid $accent;
+  background-color: transparent;
+  padding: 0 100px 0 25px;
+  transition: background-position-x 0.5s, transform 0.5s,
+    background-color 0.2s;
+  &:hover {
+    background-position-x: 85%;
+  }
+  &:active {
+    transform: translateY(3px);
+    background-color: #7d96a4;
   }
 }
 

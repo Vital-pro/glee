@@ -17,6 +17,9 @@
   &__menu {
     margin-left: 8.5%;
   }
+  &__menu li {
+    position: relative;
+  }
 }
 
 .menu {
@@ -46,6 +49,111 @@
     border-bottom: 1px solid $link;
     text-shadow: 0 0 0.65px $link, 0 0 0.65px $link;
   }
+}
+
+.menu__arrow {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 7px solid $link;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.menu__list li:hover .sub-menu__list {
+  display: block;
+}
+
+.menu__list li:hover .menu__arrow {
+  border-bottom: 7px solid $link;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: none;
+}
+
+.sub-menu__list {
+  display: none;
+  min-width: 150px;
+  position: absolute;
+  left: -20px;
+  top: 9px;
+  padding-top: 10px;
+  z-index: 3;
+}
+
+.sub-menu__list > li {
+  background-color: #edf1f4;
+  transition: background-color .3s;
+}
+
+.sub-menu__list > li:hover {
+  background-color: #849fb3;;
+}
+
+.sub-menu__item {
+  padding: 8px;
+}
+
+.sub-menu__link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  line-height: 0.9;
+  color: $title3;
+}
+
+.sub-menu__arrow {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  height: 0;
+  width: 0;
+  transform: translateY(-50%);
+  border-left: 7px solid $link;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.sub-menu__list li:hover .sub-menu__arrow {
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-right: 7px solid $link;
+  border-left: none;
+}
+
+.sub-sub-menu__list {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  z-index: 3;
+  top: 0;
+  left: 100%;
+}
+
+.sub-menu__list li:hover .sub-sub-menu__list {
+  display: block;
+}
+
+.sub-sub-menu__list > li {
+  background-color: #fcd7b6;
+  transition: background-color .3s;
+}
+
+.sub-sub-menu__list > li:hover {
+  background-color: #ebad75;
+}
+
+.sub-sub-menu__item {
+  padding: 7px;
+}
+
+.sub-sub-menu__link {
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  line-height: 0.9;
+  color: $title3;
 }
 
 .user-nav {
@@ -1698,7 +1806,6 @@
       display: block;
     }
   }
-
 }
 .tabs-comments {
   display: flex;
@@ -1757,9 +1864,8 @@
 }
 
 .details-products {
-
   &__title {
-    @extend %dmsans-700 ;
+    @extend %dmsans-700;
     font-size: 36px;
     line-height: 1.5;
     color: #243f4d;
@@ -1772,7 +1878,7 @@
   &__item {
     text-align: center;
   }
-  
+
   .products-week__item {
     // box-shadow: 0px -22px 47px 3px rgb(37 37 37 / 5%);
   }
@@ -1833,17 +1939,16 @@
     font-size: 0;
     border: 2px solid #edf1f4;
     border-radius: 5px;
-    background-image: url('../images/icons/arrow-btn-grey.svg');
+    background-image: url("../images/icons/arrow-btn-grey.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 
   .slick-next {
     right: 65px;
     transform: rotate(180deg);
-    
   }
 
   .slick-arrow:hover {

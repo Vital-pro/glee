@@ -84,11 +84,11 @@
 
 .sub-menu__list > li {
   background-color: #edf1f4;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .sub-menu__list > li:hover {
-  background-color: #849fb3;;
+  background-color: #849fb3;
 }
 
 .sub-menu__item {
@@ -138,7 +138,7 @@
 
 .sub-sub-menu__list > li {
   background-color: #fcd7b6;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .sub-sub-menu__list > li:hover {
@@ -866,6 +866,7 @@
 
   &__title {
     @extend %title-3;
+    color: #243f4d;
   }
 
   &__link {
@@ -1038,7 +1039,7 @@
     width: 100%;
     margin: 15px 0 30px;
     padding: 0 10px;
-    transition: border .3s;
+    transition: border 0.3s;
   }
 
   &__input:hover {
@@ -1077,7 +1078,7 @@
 
   &__label-input:checked + .modal__label-span {
     background-color: $accent;
-    background-image: url('../images/icons/check-filter-white.svg');
+    background-image: url("../images/icons/check-filter-white.svg");
   }
 
   &__text {
@@ -1998,9 +1999,9 @@
       margin-top: 40px;
     }
     p {
-    color: #243f4d;
-    line-height: 1.8;
-    margin-bottom: 20px;
+      color: #243f4d;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
     footer {
       padding-left: 30px;
@@ -2058,8 +2059,8 @@
 
   &__user-box {
     display: flex;
-    flex-direction: column; 
-    margin-left: 20px;   
+    flex-direction: column;
+    margin-left: 20px;
   }
 
   &__user-img {
@@ -2100,14 +2101,14 @@
 
   &__user-sharelink {
     path {
-      transition: all .2s;
+      transition: all 0.2s;
     }
   }
 
   &__user-sharelink:hover {
     path {
       fill: $accent;
-    }     
+    }
   }
 
   &__comments {
@@ -2133,13 +2134,10 @@
   }
 
   &__contact-name,
-  &__contact-email  {
+  &__contact-email {
     background-color: #fff;
     border: 1px solid $accent;
     max-width: 400px;
-  
-    
-    
   }
 
   &__contact-textarea {
@@ -2148,7 +2146,6 @@
     margin-bottom: 30px;
   }
 }
-
 
 .blog-body {
   max-width: 830px;
@@ -2262,7 +2259,7 @@
     width: 48px;
     border: none;
     border-radius: 0 5px 5px 0;
-    background-image: url('../images/icons/search-input.svg');
+    background-image: url("../images/icons/search-input.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: $accent;
@@ -2279,7 +2276,7 @@
   &__img-link {
     margin-right: 18px;
     flex: 0 0 71px;
-    display: block;    
+    display: block;
   }
 
   &__img {
@@ -2300,7 +2297,7 @@
     font-size: 12px;
     line-height: 1.5;
     color: #9a9a9a;
-    background-image: url('../images/icons/calendar-grey.svg');
+    background-image: url("../images/icons/calendar-grey.svg");
     // background-position: 0%;
   }
 }
@@ -2309,11 +2306,50 @@
   display: inline-flex;
 }
 
+// ----Terms & Conditions
 
+.terms {
+  padding-top: 100px;
+  &__article:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.article-terms {
+  & p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
 
+  &__list {
+    counter-reset: section;
+  }
 
+  &__list p {
+    padding-left: 10px;
+  }
 
+  &__list p::before {
+    content: counter(section) ".";
+    counter-increment: section;
+    margin-right: 10px;
+  }
 
+  &__list p:nth-child(-n+9)::before {
+    content: "0" counter(section) ".";
+  }
 
+  &__item {
+    line-height: 1.8;
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+}
 
 @import "media";

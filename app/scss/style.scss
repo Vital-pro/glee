@@ -36,7 +36,7 @@
     font-size: 15px;
     line-height: 0.9;
     color: $link;
-    padding: 0 3px 2px;
+    padding: 0 3px 3px;
     border-bottom: 1px solid transparent;
     transition: all 0.4s;
     &:hover {
@@ -46,6 +46,7 @@
   }
 
   &__link--active {
+    padding: 0 3px 3px;
     border-bottom: 1px solid $link;
     text-shadow: 0 0 0.65px $link, 0 0 0.65px $link;
   }
@@ -1020,12 +1021,11 @@
 
   &__label-checkbox {
     display: flex;
+    align-items: center;
     padding-bottom: 30px;
     margin-bottom: 35px;
     border-bottom: 2px solid #f6f6f6;
-    & > input {
-      margin-right: 10px;
-    }
+
     & > a {
       margin-left: auto;
       color: inherit;
@@ -1038,6 +1038,11 @@
     width: 100%;
     margin: 15px 0 30px;
     padding: 0 10px;
+    transition: border .3s;
+  }
+
+  &__input:hover {
+    border: 2px solid $footer;
   }
 
   &__btn-login {
@@ -1047,12 +1052,32 @@
     transition: background-color 0.3s, transform 0.3s;
     margin-bottom: 30px;
     &:hover {
-      background-color: #99abb5;
+      background-color: #919ba5;
     }
     &:active {
       background-color: #51626d;
       transform: translateY(3px);
     }
+  }
+
+  &__label-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__label-span {
+    width: 15px;
+    height: 15px;
+    border: 1px solid $accent;
+    margin-right: 10px;
+  }
+
+  &__label-input:checked + .modal__label-span {
+    background-color: $accent;
+    background-image: url('../images/icons/check-filter-white.svg');
   }
 
   &__text {

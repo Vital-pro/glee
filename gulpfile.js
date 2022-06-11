@@ -91,7 +91,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app/_chunk/**/*.html'], html);
+  watch(['app/_chunk/**/*.html', 'dist/*.html'], html);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);

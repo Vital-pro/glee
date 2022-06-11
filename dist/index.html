@@ -11,7 +11,9 @@
 
 <body>
   <div class="wrapper">
-    @include('../app/_chunk/header.html')
+    @include('../app/_chunk/header.html', {
+      "page": "home"
+    })
     @include('../app/_chunk/mobile_btn.html')
 
     <main class="page">
@@ -469,7 +471,7 @@
   </div>
 
 
-  <script src="js/main.min.js"></script>
+  <script defer src="js/main.min.js"></script>
 </body>
 
 </html>

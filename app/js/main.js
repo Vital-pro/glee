@@ -1,4 +1,5 @@
 $(function(){
+  
 
   $('.blog-body__slider').slick({
     prevArrow:'<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height="30px" viewBox="0 0 15 30" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:rgb(255%,255%,255%);fill-opacity:1;" d="M 11.25 26.25 C 10.769531 26.25 10.289062 26.066406 9.925781 25.699219 L 0.550781 16.324219 C -0.183594 15.59375 -0.183594 14.40625 0.550781 13.675781 L 9.925781 4.300781 C 10.65625 3.566406 11.84375 3.566406 12.574219 4.300781 C 13.308594 5.03125 13.308594 6.21875 12.574219 6.949219 L 4.527344 15 L 12.578125 23.050781 C 13.308594 23.78125 13.308594 24.96875 12.578125 25.703125 C 12.210938 26.070312 11.730469 26.25 11.25 26.25 Z M 11.25 26.25 "/></g></svg></button>',
@@ -48,10 +49,10 @@ $(function(){
     arrows: false,
     dots: true,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     infinite: true,
-    // speed: 300,
-    autoplaySpeed: 2000
+    speed: 300,
+    // autoplaySpeed: 2000
   });
 
   $('.details-slide__thumb').slick({

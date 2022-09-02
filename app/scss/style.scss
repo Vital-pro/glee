@@ -1982,6 +1982,7 @@
 // ----Blog-------------------------
 
 .blog {
+  padding: 120px 0;
   h4 {
     @extend %rubik-500;
     font-size: 1.13rem;
@@ -2018,7 +2019,6 @@
       }
     }
   }
-  padding: 120px 0;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -2158,7 +2158,7 @@
 
   &__img {
     width: 830px;
-    max-height: 500px;
+    min-height: 500px;
     object-fit: cover;
   }
 
@@ -2294,11 +2294,12 @@
   }
 
   &__date {
+    text-transform: uppercase;
     font-size: 12px;
     line-height: 1.5;
     color: #9a9a9a;
     background-image: url("../images/icons/calendar-grey.svg");
-    // background-position: 0%;
+    background-position: 0% 4%;
   }
 }
 
@@ -2306,7 +2307,7 @@
   display: inline-flex;
 }
 
-// ----Terms & Conditions
+// --start--Terms & Conditions----
 
 .terms {
   padding-top: 100px;
@@ -2339,7 +2340,7 @@
     margin-right: 10px;
   }
 
-  &__list p:nth-child(-n+9)::before {
+  &__list p:nth-child(-n + 9)::before {
     content: "0" counter(section) ".";
   }
 
@@ -2351,5 +2352,307 @@
     line-height: 1.8;
   }
 }
+// --end--Terms & Conditions----
+
+//-- start---Mission---------
+
+.about {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__img {
+    width: 50%;
+    min-height: 673px;
+    object-fit: cover;
+    max-width: 570px;
+  }
+
+  &__mission {
+    flex: 0 0 50%;
+  }
+}
+.mission {
+  &__years {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__years-num {
+    @extend %rubik-500;
+    font-size: 140px;
+    font-weight: 700;
+    color: $accent;
+    margin-right: 30px;
+  }
+
+  &__years-descr {
+  }
+
+  &__years-descr-text {
+    @extend %rubik-400;
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  &__creative {
+    margin-bottom: 60px;
+  }
+
+  &__creative-title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 1;
+    color: $link1;
+    margin-bottom: 40px;
+  }
+
+  &__creative-text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $link1;
+  }
+
+  &__awards {
+  }
+}
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  padding-top: 35px;
+  position: relative;
+  // border-top: 2px solid $accent;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 85%;
+    top: 0;
+    left: 5%;
+    background-color: #ebeef3;
+  }
+  &__item {
+    @extend %dmsans-700;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    position: relative;
+    &:not(:first-child)::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 70px;
+      background-color: #ebeef3;
+      top: -10%;
+      left: -20%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 40px;
+      background-image: url("../images/icons/awards1.svg");
+      background-repeat: no-repeat;
+    }
+    &:nth-child(2)::before {
+      background-image: url("../images/icons/awards2.svg");
+    }
+    &:nth-child(3)::before {
+      background-image: url("../images/icons/awards3.svg");
+    }
+  }
+
+  &__num {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 1;
+    color: $link1;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #4c4c4c;
+  }
+}
+//-- end---Mission---------
+
+// --start----Advantages----------
+
+.advantages {
+  padding: 80px 0;
+  background-color: #fcd7b6;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+  }
+
+  &__item {
+    @extend %dmsans-700;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 73px;
+      height: 64px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../images/icons/advantages1.svg");
+      background-repeat: no-repeat;
+    }
+    &:nth-child(2)::before {
+      background-image: url("../images/icons/advantages2.svg");
+      top: 7%;
+    }
+    &:nth-child(3)::before {
+      background-image: url("../images/icons/advantages3.svg");
+    }
+    &:nth-child(4)::before {
+      background-image: url("../images/icons/advantages4.svg");
+    }
+  }
+
+  &__item-num {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+
+// --end----Advantages----------
+
+// --start--Team---------------
+
+.team {
+  padding: 120px 0 30px; 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__descr {
+    flex: 0 1 300px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    min-height: 50px;
+    padding: 0 70px 0 15px;
+    background-position: 75% 50%;
+    border-radius: 5px;
+  }
+
+  &__wrapper {
+    flex: 0 1 770px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+  }
+
+  &__photos {
+    flex: 0 1 48%;
+  }
+
+  &__fotos-inner {
+  }
+
+  &__photos-img {
+    object-fit: cover;
+    object-position: center;
+    height: 320px;
+    width: 370px;
+  }
+
+  &__photos-box {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    max-width: 320px;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);    
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+  }
+
+  &__photos-name-group {
+    margin-right: auto;
+  }
+
+  &__photos-name {
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 1.2;
+    display: block;
+  }
+
+  &__photos-position {
+    @extend %rubik-400;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  &__photos-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    & path {
+      fill: #929292;
+      transition: fill .3s;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &:hover path {
+      fill: $accent;
+    }
+  }
+
+  &__photos-google-link {
+  }
+}
+.container {
+}
+.link-btn {
+}
+
+// --end----Team---------------
 
 @import "media";

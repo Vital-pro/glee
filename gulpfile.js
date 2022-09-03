@@ -104,6 +104,7 @@ exports.browsersync = browsersync;
 exports.watching    = watching;
 exports.images      = images;
 exports.cleanDist   = cleanDist;
+//***!!!!!****перед build сделай копию или проверь на копии из-за chunk 
 exports.build       = series(cleanDist, images, build);
 
 exports.default = parallel(html, styles, scripts, browsersync, watching);

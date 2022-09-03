@@ -1,0 +1,1 @@
+  var mixer = mixitup('.products-week__inner');  

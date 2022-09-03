@@ -1,5 +1,5 @@
 // "use strict";
-window.addEventListener("DOMContentLoaded", () => {
+// window.addEventListener("DOMContentLoaded", () => {
 $(function () {
   $(".blog-body__slider").slick({
     prevArrow:
@@ -99,7 +99,7 @@ $(function () {
 });
 
 // ======start mixitup===================================================
-var mixer = mixitup('.products-week__inner');
+// var mixer = mixitup('.products-week__inner');
 
 // -------Пришлось скрипт обернуть в оператор if----------------
 
@@ -129,46 +129,46 @@ var mixer = mixitup('.products-week__inner');
   
 
   // -----***--this Tabs native JS--start***-----------------
-  const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-    const header = document.querySelector(headerSelector),
-          tab = document.querySelectorAll(tabSelector),
-          content = document.querySelectorAll(contentSelector);
+  // const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+  //   const header = document.querySelector(headerSelector),
+  //         tab = document.querySelectorAll(tabSelector),
+  //         content = document.querySelectorAll(contentSelector);
   
-      function hideContent () {
-        content.forEach(item => {
-          item.style.display = 'none';
-        });
+  //     function hideContent () {
+  //       content.forEach(item => {
+  //         item.style.display = 'none';
+  //       });
   
-        tab.forEach(item => {
-          item.classList.remove(activeClass);
-        });
-      };
+  //       tab.forEach(item => {
+  //         item.classList.remove(activeClass);
+  //       });
+  //     };
   
-      function showContent (i = 2) {
-        content[i].style.display = 'block'; 
-        tab[i].classList.add(activeClass);  
-      }
+  //     function showContent (i = 2) {
+  //       content[i].style.display = 'block'; 
+  //       tab[i].classList.add(activeClass);  
+  //     }
   
-      hideContent();
-      showContent();
+  //     hideContent();
+  //     showContent();
   
-      header.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = e.target;
-        if (target &&
-          (target.classList.contains(tabSelector.replace(/\./, '')) || 
-        target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
-          tab.forEach((item, i) => {
-            if (target == item || target.parentNode === item) {
-              hideContent();
-              showContent(i);
-            }
-          });
-        }
-      });
-  };
+  //     header.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       const target = e.target;
+  //       if (target &&
+  //         (target.classList.contains(tabSelector.replace(/\./, '')) || 
+  //       target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+  //         tab.forEach((item, i) => {
+  //           if (target == item || target.parentNode === item) {
+  //             hideContent();
+  //             showContent(i);
+  //           }
+  //         });
+  //       }
+  //     });
+  // };
   
-  tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
+  // tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
    // -----***--this Tabs native JS--finish***-----------------
 
 
@@ -236,6 +236,6 @@ var mixer = mixitup('.products-week__inner');
   // document.getElementById("comments__date2").innerText = date2;
 
   // https://javascript.ru/forum/misc/65647-vyvod-nazvaniya-mesyaca.html  вывод названия месяца??
-  
-});
+
+// });
 

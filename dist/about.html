@@ -221,24 +221,17 @@
             </div>
           </div>
         </div>
+      </section>
 
-  </div>
-  </div>
-  </section>
+      @include('../app/_chunk/articles.html')
 
-
-
-
-
-  @include('../app/_chunk/articles.html')
-
-  <div class="page__partners partners">
-    <div class="partners__container container">
-      @include('../app/_chunk/partners_list.html')
-    </div>
-  </div>
-  </main>
-  @include('../app/_chunk/footer.html')
+      <div class="page__partners partners">
+        <div class="partners__container container">
+          @include('../app/_chunk/partners_list.html')
+        </div>
+      </div>
+    </main>
+    @include('../app/_chunk/footer.html')
   </div>
 
   <script src="js/main.min.js"></script>

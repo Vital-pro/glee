@@ -111,22 +111,40 @@ $(function () {
 // }
 // ======finish mixitup===================================================
 
-
+// ----Mobile Button start------------------------
   const mobileNavBtn = document.querySelector(".header__mobile-btn");
   const mobileNavLine = document.querySelector(".header__mobile-line");
   let mobileNavList = document.querySelector(".header-mobile__list");
-  let mobileNavLink = document.querySelector(".header-mobile__list");
+  let filterSelect = document.querySelector('.product-content__filter-selects');
 
   mobileNavBtn.addEventListener("click", function () {
-    mobileNavLine.classList.toggle("active");
-    mobileNavList.classList.toggle("active");
-  });
-
-  mobileNavLink.addEventListener("click", function () {
+    document.body.classList.toggle('no-scroll');
     mobileNavLine.classList.toggle("active");
     mobileNavList.classList.toggle("active");
   });
   
+  mobileNavList.addEventListener("click", function () {
+    document.body.classList.toggle('no-scroll');
+    mobileNavLine.classList.toggle("active");
+    mobileNavList.classList.toggle("active");
+  });
+  // ----Mobile Button finish------------------------
+  const productFilter = document.querySelector('.filter');
+  const filterBtn = document.querySelector('.product__filter-btn');
+
+  filterBtn.addEventListener('click', function() {
+    productFilter.classList.toggle('block');
+    document.body.classList.toggle('no-scroll');
+  });
+
+  // ====Filer start==================================================
+
+
+  // ====Filer finish==================================================
+
+
+
+
 
   // -----***--this Tabs native JS--start***-----------------
   // const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {

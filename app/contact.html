@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <title>glee</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -88,20 +89,32 @@
     </nav>
     <div class="header__user-nav user-nav">
       <a class="user-nav__link-search" href="#">
-        <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon">
+        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->
+        <svg width="50.66" height="50.656">
+          <use xlink:href="images/icons/sprite.svg#search"></use>
+        </svg>
       </a>
       <div class="user-nav__icons">
         <a class="user-nav__link-heart" href="#">
           <span class="user-nav__num">3</span>
-          <img class="user-nav__img-heart" src="images/icons/heart.svg" alt="user icon heart">
+          <!-- <img class="user-nav__img-heart" src="images/icons/heart.svg" alt="user icon heart"> -->
+          <svg width="20" height="20">
+            <use xlink:href="images/icons/sprite.svg#heart"></use>
+          </svg>
         </a>
         <a class="user-nav__link-cart" href="#">
           <span class="user-nav__num">7</span>
-          <img class="user-nav__img-cart" src="images/icons/cart.svg" alt="user icon cart">
+          <!-- <img class="user-nav__img-cart" src="images/icons/cart.svg" alt="user icon cart"> -->
+          <svg width="22" height="20">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
         </a>
       </div>
       <a class="user-nav__link-popup" href="#">
-        <img class="user-nav__img-popup" src="images/icons/popup.svg" alt="user icon popup">
+        <!-- <img class="user-nav__img-popup" src="images/icons/popup.svg" alt="user icon popup"> -->
+        <svg width="50.66" height="50.656">
+          <use xlink:href="images/icons/sprite.svg#popup"></use>
+        </svg>
       </a>
     </div>
     <button class="header__mobile-btn" type="button">
@@ -111,30 +124,39 @@
 </header>
     <ul class="header-mobile__list">
       <li class="header-mobile__item">
-        <a href="#" class="header-mobile__link menu__link">Home</a>
+        <a href="index.html" class="header-mobile__link menu__link">Home</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">News</a>
+        <a href="product-1.html" class="header-mobile__link menu__link">Products</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">Services</a>
+        <a href="blog-details.html" class="header-mobile__link menu__link">News</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">Contact</a>
+        <a href="contact.html" class="header-mobile__link menu__link">Contact</a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link">
-          <img class="header-mobile__search-img" src="images/icons/search.svg" alt="search icon">
+          <!-- <img class="header-mobile__search-img" src="images/icons/search.svg" alt="search icon"> -->
+          <svg width="50.66" height="50.656">
+            <use xlink:href="images/icons/sprite.svg#search"></use>
+          </svg>
         </a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link--user">
-          <img class="header-mobile__cart-img" src="images/icons/cart.svg" alt="user icon cart">
+          <!-- <img class="header-mobile__cart-img" src="images/icons/cart.svg" alt="user icon cart"> -->
+          <svg width="22" height="20">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
         </a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link--user">
-          <img class="header-mobile__heart-img" src="images/icons/heart.svg" alt="user icon heart">
+          <!-- <img class="header-mobile__heart-img" src="images/icons/heart.svg" alt="user icon heart"> -->
+          <svg width="20" height="20">
+            <use xlink:href="images/icons/sprite.svg#heart"></use>
+          </svg>
         </a>
       </li>
     </ul>
@@ -169,7 +191,10 @@
           <div class="contact__items">
             <div class="contact__item">
               <a class="contact__item-link" href="#!">
-                <svg width="193px" height="193px">
+                <svg class="contact__item-svg">
+                  <use class="u1" xlink:href="images/icons/sprite.svg#contactaddress"></use>
+                </svg>
+                <!-- <svg width="193px" height="193px">
                   <defs>
                     <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="193px" height="193px">
                       <feOffset in="SourceAlpha" dx="0" dy="6" />
@@ -191,7 +216,7 @@
                   </g>
                   <path class="line" fill-rule="evenodd" fill="rgb(163, 187, 200)"
                     d="M110.525,111.047 C110.035,111.547 109.303,111.687 108.662,111.402 L102.997,108.892 L96.403,111.809 C96.116,111.937 95.808,112.000 95.500,112.000 C95.191,112.000 94.883,111.937 94.597,111.809 L88.013,108.892 L82.339,111.402 C81.697,111.687 80.965,111.547 80.475,111.047 C79.985,110.547 79.862,109.817 80.162,109.185 L85.156,98.669 C85.262,98.446 85.439,98.266 85.661,98.156 C86.205,97.885 86.869,98.104 87.142,98.647 C87.307,98.978 87.290,99.353 87.128,99.656 L82.785,108.800 L87.105,106.886 C87.679,106.631 88.338,106.632 88.911,106.887 L95.494,109.803 C95.494,109.803 95.501,109.803 95.504,109.803 C95.505,109.803 95.505,109.803 95.505,109.803 L102.090,106.886 C102.661,106.631 103.319,106.631 103.894,106.886 L108.214,108.800 L103.872,99.655 C103.653,99.248 103.709,98.731 104.046,98.380 C104.431,97.978 105.047,97.930 105.487,98.244 C105.638,98.352 105.762,98.497 105.844,98.668 L110.838,109.186 C111.137,109.817 111.015,110.546 110.525,111.047 ZM107.897,88.283 L98.349,104.210 C97.745,105.219 96.680,105.821 95.500,105.821 C94.320,105.821 93.254,105.219 92.650,104.210 L83.102,88.283 C83.091,88.263 83.079,88.242 83.069,88.221 C82.056,86.253 81.527,84.037 81.540,81.810 C81.563,78.168 83.004,74.727 85.601,72.121 C88.197,69.515 91.643,68.052 95.302,68.001 C99.069,67.949 102.621,69.370 105.301,72.002 C107.982,74.633 109.459,78.146 109.459,81.894 C109.459,84.123 108.945,86.251 107.931,88.221 C107.920,88.242 107.908,88.263 107.897,88.283 ZM103.752,73.564 C101.537,71.390 98.613,70.196 95.505,70.196 C95.448,70.196 95.390,70.197 95.333,70.198 C88.982,70.285 83.785,75.501 83.747,81.823 C83.735,83.714 84.163,85.519 85.016,87.189 L94.545,103.085 C94.837,103.572 95.310,103.625 95.500,103.625 C95.690,103.625 96.163,103.572 96.455,103.085 L105.983,87.189 C106.826,85.540 107.253,83.759 107.253,81.894 C107.253,78.739 106.009,75.781 103.752,73.564 ZM95.500,86.921 C92.715,86.921 90.449,84.667 90.449,81.894 C90.449,79.122 92.715,76.868 95.500,76.868 C98.285,76.868 100.551,79.122 100.551,81.894 C100.551,84.667 98.285,86.921 95.500,86.921 ZM95.500,79.064 C93.932,79.064 92.655,80.334 92.655,81.894 C92.655,83.456 93.932,84.726 95.500,84.726 C97.069,84.726 98.344,83.456 98.344,81.894 C98.344,80.334 97.069,79.064 95.500,79.064 Z" />
-                </svg>
+                </svg> -->
                 <h5 class="contact__item-title">
                   Address
                 </h5>
@@ -202,7 +227,11 @@
             </div>
             <div class="contact__item contact__item--active">
               <a class="contact__item-link" href="#!">
-                <svg width="193px" height="194px">
+                <svg class="contact__item-svg">
+                  <use class="u1" xlink:href="images/icons/sprite.svg#contactemail">
+                  </use>
+                </svg>
+                <!-- <svg width="193px" height="194px">
                   <defs>
                     <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="193px" height="194px">
                       <feOffset in="SourceAlpha" dx="0" dy="6" />
@@ -225,7 +254,7 @@
                   </g>
                   <path class="line" fill-rule="evenodd" fill="rgb(163, 187, 200)"
                     d="M114.053,107.870 L78.976,107.918 L78.975,107.918 C78.724,107.918 78.484,107.820 78.306,107.646 C78.128,107.472 78.028,107.234 78.028,106.987 L78.000,86.786 C78.000,86.780 78.001,86.775 78.001,86.769 C78.005,86.478 78.147,86.194 78.409,86.015 L83.731,82.399 L83.731,78.561 C83.731,78.047 84.155,77.629 84.679,77.629 L90.746,77.629 L95.963,74.083 C96.288,73.862 96.718,73.863 97.042,74.084 L102.227,77.629 L108.320,77.629 C108.843,77.629 109.267,78.047 109.267,78.561 L109.267,82.443 L114.564,86.064 C114.753,86.194 114.880,86.379 114.937,86.583 C114.958,86.629 114.971,86.712 114.971,86.767 L114.999,106.937 C115.000,107.450 114.576,107.869 114.053,107.870 ZM111.226,106.010 L96.514,94.786 L81.748,106.051 L111.226,106.010 ZM83.731,84.662 L80.613,86.782 L83.731,88.903 L83.731,84.662 ZM79.897,88.563 L79.920,105.086 L91.363,96.356 L79.897,88.563 ZM96.500,75.984 L94.079,77.629 L98.907,77.629 L96.500,75.984 ZM107.372,79.493 L85.626,79.493 L85.626,90.190 L92.934,95.158 L95.933,92.870 C96.278,92.607 96.749,92.616 97.081,92.862 C97.086,92.865 97.090,92.867 97.094,92.870 L100.071,95.142 L107.372,90.149 L107.372,79.493 ZM109.267,84.713 L109.267,88.854 L112.295,86.783 L109.267,84.713 ZM113.078,88.517 L101.640,96.338 L113.101,105.082 L113.078,88.517 ZM89.137,88.999 C89.137,88.485 89.561,88.067 90.085,88.067 L102.915,88.067 C103.437,88.067 103.861,88.485 103.861,88.999 C103.861,89.514 103.437,89.932 102.915,89.932 L90.085,89.932 C89.561,89.932 89.137,89.514 89.137,88.999 ZM102.915,85.085 L90.085,85.085 C89.561,85.085 89.137,84.667 89.137,84.153 C89.137,83.639 89.561,83.221 90.085,83.221 L102.915,83.221 C103.437,83.221 103.861,83.639 103.861,84.153 C103.861,84.667 103.437,85.085 102.915,85.085 Z" />
-                </svg>
+                </svg> -->
                 <h5 class="contact__item-title">
                   Our Email
                 </h5>
@@ -239,7 +268,10 @@
             </div>
             <div class="contact__item">
               <a class="contact__item-link" href="#!">
-                <svg width="193px" height="194px">
+                <svg class="contact__item-svg">
+                  <use class="u1" xlink:href="images/icons/sprite.svg#contactphone"></use>
+                </svg>
+                <!-- <svg width="193px" height="194px">
                   <defs>
                     <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="193px" height="194px">
                       <feOffset in="SourceAlpha" dx="0" dy="6" />
@@ -262,14 +294,14 @@
                   </g>
                   <path class="line" fill-rule="evenodd" fill="rgb(163, 187, 200)"
                     d="M109.941,90.244 C107.151,90.244 104.881,88.004 104.881,85.249 C104.881,82.495 107.151,80.254 109.941,80.254 C112.730,80.254 115.000,82.495 115.000,85.249 C115.000,88.004 112.730,90.244 109.941,90.244 ZM109.941,82.204 C108.240,82.204 106.857,83.570 106.857,85.249 C106.857,86.929 108.240,88.294 109.941,88.294 C111.641,88.294 113.025,86.929 113.025,85.249 C113.025,83.570 111.641,82.204 109.941,82.204 ZM109.941,78.908 C107.151,78.908 104.881,76.667 104.881,73.913 C104.881,71.158 107.151,68.918 109.941,68.918 C112.730,68.918 115.000,71.158 115.000,73.913 C115.000,76.667 112.730,78.908 109.941,78.908 ZM109.941,70.867 C108.240,70.867 106.857,72.234 106.857,73.913 C106.857,75.592 108.240,76.959 109.941,76.959 C111.641,76.959 113.025,75.592 113.025,73.913 C113.025,72.234 111.641,70.867 109.941,70.867 ZM96.499,112.917 C93.710,112.917 91.440,110.676 91.440,107.922 C91.440,105.168 93.710,102.927 96.499,102.927 C99.289,102.927 101.559,105.168 101.559,107.922 C101.559,110.677 99.289,112.917 96.499,112.917 ZM96.499,104.877 C94.799,104.877 93.415,106.243 93.415,107.922 C93.415,109.601 94.799,110.967 96.499,110.967 C98.200,110.967 99.585,109.601 99.585,107.922 C99.585,106.243 98.200,104.877 96.499,104.877 ZM96.499,101.581 C93.710,101.581 91.440,99.340 91.440,96.586 C91.440,93.831 93.710,91.591 96.499,91.591 C99.289,91.591 101.559,93.831 101.559,96.586 C101.559,99.340 99.289,101.581 96.499,101.581 ZM96.499,93.540 C94.799,93.540 93.415,94.907 93.415,96.586 C93.415,98.265 94.799,99.632 96.499,99.632 C98.200,99.632 99.585,98.265 99.585,96.586 C99.585,94.907 98.200,93.540 96.499,93.540 ZM96.499,90.244 C93.710,90.244 91.440,88.004 91.440,85.249 C91.440,82.495 93.710,80.254 96.499,80.254 C99.289,80.254 101.559,82.495 101.559,85.249 C101.559,88.004 99.289,90.244 96.499,90.244 ZM96.499,82.204 C94.799,82.204 93.415,83.570 93.415,85.249 C93.415,86.929 94.799,88.294 96.499,88.294 C98.200,88.294 99.585,86.929 99.585,85.249 C99.585,83.570 98.200,82.204 96.499,82.204 ZM96.499,78.908 C93.710,78.908 91.440,76.667 91.440,73.913 C91.440,71.158 93.710,68.918 96.499,68.918 C99.289,68.918 101.559,71.158 101.559,73.913 C101.559,76.667 99.289,78.908 96.499,78.908 ZM96.499,70.867 C94.799,70.867 93.415,72.234 93.415,73.913 C93.415,75.592 94.799,76.959 96.499,76.959 C98.200,76.959 99.585,75.592 99.585,73.913 C99.585,72.234 98.200,70.867 96.499,70.867 ZM83.059,101.581 C80.269,101.581 78.000,99.340 78.000,96.586 C78.000,93.831 80.269,91.591 83.059,91.591 C85.849,91.591 88.118,93.831 88.118,96.586 C88.118,99.340 85.849,101.581 83.059,101.581 ZM83.059,93.540 C81.358,93.540 79.974,94.907 79.974,96.586 C79.974,98.265 81.358,99.632 83.059,99.632 C84.760,99.632 86.143,98.265 86.143,96.586 C86.143,94.907 84.760,93.540 83.059,93.540 ZM83.059,90.244 C80.269,90.244 78.000,88.004 78.000,85.249 C78.000,82.495 80.269,80.254 83.059,80.254 C85.849,80.254 88.118,82.495 88.118,85.249 C88.118,88.004 85.849,90.244 83.059,90.244 ZM83.059,82.204 C81.358,82.204 79.974,83.570 79.974,85.249 C79.974,86.929 81.358,88.294 83.059,88.294 C84.760,88.294 86.143,86.929 86.143,85.249 C86.143,83.570 84.760,82.204 83.059,82.204 ZM83.059,78.908 C80.269,78.908 78.000,76.667 78.000,73.913 C78.000,71.158 80.269,68.918 83.059,68.918 C85.849,68.918 88.118,71.158 88.118,73.913 C88.118,76.667 85.849,78.908 83.059,78.908 ZM83.059,70.867 C81.358,70.867 79.974,72.234 79.974,73.913 C79.974,75.592 81.358,76.959 83.059,76.959 C84.760,76.959 86.143,75.592 86.143,73.913 C86.143,72.234 84.760,70.867 83.059,70.867 ZM109.941,91.591 C112.730,91.591 115.000,93.831 115.000,96.586 C115.000,99.340 112.730,101.581 109.941,101.581 C107.151,101.581 104.881,99.340 104.881,96.586 C104.881,93.831 107.151,91.591 109.941,91.591 ZM109.941,99.632 C111.641,99.632 113.025,98.265 113.025,96.586 C113.025,94.907 111.641,93.540 109.941,93.540 C108.240,93.540 106.857,94.907 106.857,96.586 C106.857,98.265 108.240,99.632 109.941,99.632 Z" />
-                </svg>
+                </svg> -->
                 <h5 class="contact__item-title">
                   Our Phone
                 </h5>
                 <a class="contact__item-phone" href="tel:+0029129102320">
                   Office Telephone : 0029129102320
                 </a>
-                <a class="contact__item-mobile" href="tel:+000 2324 39493">
+                <a class="contact__item-mobile" href="tel:+000232439493">
                   Mobile : 000 2324 39493
                 </a>
               </a>
@@ -385,19 +417,19 @@
         <h6 class="footer__top-title">Services</h6>
         <ul class="footer__top-list">
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">About us</a>
+            <a class="footer__top-link" href="about.html">About us</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Return Policy</a>
+            <a class="footer__top-link" href="blog-details.html">Our Blog</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Our Blog</a>
+            <a class="footer__top-link" href="product-1.html">Produts</a>
+          </li>    
+          <li class="footer__top-item">
+            <a class="footer__top-link" href="product-details.html">Exclusive</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Contact Us</a>
-          </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Terms & Condition</a>
+            <a class="footer__top-link" href="conditions.html">Terms & Condition</a>
           </li>
         </ul>
       </div>
@@ -405,16 +437,16 @@
         <h6 class="footer__top-title">Account</h6>
         <ul class="footer__top-list">
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Your Account</a>
+            <a class="footer__top-link" href="login.html">Your Account</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Checkout</a>
+            <a class="footer__top-link" href="contact.html">Contact Us</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Login</a>
+            <a class="footer__top-link" href="login.html">Login</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Register</a>
+            <a class="footer__top-link" href="contact.html">Register</a>
           </li>
         </ul>
       </div>
@@ -436,16 +468,16 @@
       </p>
       <ul class="footer__bottom-menu">
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Home</a>
+          <a class="footer__bottom-limk" href="index.html">Home</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">About</a>
+          <a class="footer__bottom-limk" href="about.html">About</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Blog</a>
+          <a class="footer__bottom-limk" href="blog.html">Blog</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Contact</a>
+          <a class="footer__bottom-limk" href="contact.html">Contact</a>
         </li>
       </ul>
     </div>

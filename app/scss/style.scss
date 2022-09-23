@@ -173,9 +173,16 @@
     border-radius: 25px;
   }
 
+  &__link-search svg {
+    border-radius: 50%;
+    fill: $link1;
+    background-color: #edf1f4;
+  }
+
   &__link-heart {
     margin-right: 58px;
     position: relative;
+    fill: #243f4d;
     &::after {
       position: absolute;
       content: "";
@@ -205,6 +212,13 @@
 
   &__link-cart {
     position: relative;
+    fill: #243f4d;
+  }
+
+  &__link-popup svg {
+    border-radius: 50%;
+    background-color: $accent;
+    fill: #fff;
   }
 }
 
@@ -563,6 +577,7 @@
   }
 
   &__item-link {
+    fill: #243f4d;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -571,12 +586,13 @@
     background-color: #fefefe;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 50%;
-    path {
+    transition: all 0.5s;
+    .products-week__item-svg {
       transition: all 0.5s;
     }
     &:hover {
       background-color: $accent;
-      path {
+      .products-week__item-svg {
         fill: #fff;
       }
     }
@@ -587,8 +603,14 @@
 
   &__item:hover {
     .products-week__item-icons {
-      transform: translateX(0);
+      // transform: translateX(0)???????????????;
+      transform: translate(0%, 26%);
     }
+  }
+  .products-week__item-svg {
+    width: 22px;
+    height: 20px;
+    fill: rgb(163, 187, 200);
   }
 
   &__item-img {
@@ -613,7 +635,6 @@
     text-align: center;
   }
 }
-
 
 // ----exclusive-----------------------------
 
@@ -810,6 +831,8 @@
   justify-content: center;
 
   &__link {
+    width: 127px;
+    height: 127px;
     animation-name: StartButton;
     animation-duration: 1.5s;
     animation-timing-function: ease;
@@ -1104,7 +1127,7 @@
 // ----Contact--------------------
 
 .contact {
-  padding-top: 120px;
+  padding: 100px 0 120px;
   text-align: center;
 
   &__subtitle {
@@ -1134,19 +1157,48 @@
     line-height: 1.88;
     color: #565872;
     border: 3px solid transparent;
-    transition: border-color 0.4s;
+    transition: border-color 0.2s;
+    &--active {
+      border: 3px solid #a3bbc8;
+    }
+    &--active svg {
+      .u1 {
+        --color1: rgb(163, 187, 200);
+        --color2: rgb(255, 255, 255);
+      }
+    }
+
+    &-svg {
+      width: 194px;
+      height: 194px;
+      filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.2));
+    }
+    .u1 {
+      --color1: rgb(255, 255, 255);
+      --color2: rgb(163, 187, 200);
+    }
+    &:hover {
+      .u1 {
+        --color1: rgb(163, 187, 200);
+        --color2: rgb(255, 255, 255);
+      }
+      .contact__item-svg {
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+      }
+    }
+
+    // #u1:hover {
+    //   --color1: rgb(163, 187, 200);
+    //   --color2: rgb(255, 255, 255);
+    // }
+
+    // ----old variant---------
     & path.line,
     & path.background {
       transition: all 0.4s;
     }
     &:hover {
       border: 3px solid #a3bbc8;
-    }
-    &:hover path.line {
-      fill: #fff;
-    }
-    &:hover path.background {
-      fill: $accent;
     }
   }
 
@@ -1274,11 +1326,23 @@
     margin-bottom: 60px;
     // посмотрим??  -----------------------------
   }
+  &__item:hover {
+    .product .products-week__item-icons {
+      transform: translateX(0);
+      // transform: translate(0%, -20%);
+    }
+  }
+  .products-week__item-svg {
+    width: 22px;
+    height: 20px;
+    fill: rgb(163, 187, 200);
+  }
 }
 
 .filter-item:not(:last-child) {
   margin-bottom: 60px;
 }
+
 .filter-title {
   @extend %dmsans-700;
   text-transform: uppercase;
@@ -1491,19 +1555,26 @@
     }
     &-btn {
       padding-left: 15px;
-      cursor: pointer;
       border: none;
       background-color: transparent;
+      cursor: pointer;
+      & svg {
+        width: 15px;
+        height: 15px;
+        fill: rgb(141, 141, 141);
+      }
     }
-  }
-  &__filter-btn--active {
-    path {
+    .product-content__filter-btn--active svg {
       fill: $accent;
     }
   }
+
   & .products-week__item-icons {
     transform: translateX(-350%);
     transition: all 0.4s;
+  }
+  & .products-week__item:hover .products-week__item-icons {
+    transform: translate(0, -50%);
   }
 }
 // -------------------------------
@@ -1586,17 +1657,18 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    path {
+    transition: all 0.5s;
+    & svg {
+      width: 22px;
+      height: 20px;
+      fill: $accent;
       transition: all 0.5s;
     }
     &:hover {
       background-color: $accent;
-      path {
+      & svg {
         fill: #fff;
       }
-    }
-    &:not(:last-child) {
-      margin-right: 16px;
     }
   }
 }
@@ -1628,11 +1700,11 @@
     font-size: 40px;
     color: $title3;
     line-height: 0.7;
-    margin-bottom: 20px;
+    margin-bottom: 3.5%;
   }
 
   &__content-star {
-    margin-bottom: 30px;
+    margin-bottom: 5%;
   }
 
   &__content-price {
@@ -1640,19 +1712,19 @@
     font-size: 40px;
     color: $title3;
     line-height: 0.7;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
   }
 
   &__content-text {
     line-height: 2;
     color: #243f4d;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
   }
 
   &__content-box {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 8.8%;
   }
 
   &__content-btn {
@@ -1861,6 +1933,7 @@
 
   &__inner-top {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
   }
 
@@ -1909,10 +1982,6 @@
     text-align: center;
   }
 
-  .products-week__item {
-    // box-shadow: 0px -22px 47px 3px rgb(37 37 37 / 5%);
-  }
-
   .products-week__item-icons {
     position: absolute;
     bottom: 30%;
@@ -1920,37 +1989,41 @@
     transition: transform 0.5s;
   }
 
+  .products-week__item-link {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: all 0.5s;
+    & svg {
+      width: 22px;
+      height: 20px;
+      fill: $accent;
+      transition: all 0.5s;
+    }
+    &:hover {
+      background-color: $accent;
+      & svg {
+        fill: #fff;
+      }
+    }
+  }
+
   .slick-initialized .slick-slide {
     margin-left: 10px;
     margin-right: 10px;
   }
 
-  &__item-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background-color: #fefefe;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    border-radius: 50%;
-    path {
-      transition: all 0.5s;
-    }
-    &:hover {
-      background-color: $accent;
-      path {
-        fill: #fff;
-      }
-    }
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
-  }
-
   .products-week__item:hover {
     .products-week__item-icons {
-      transform: translateX(20%);
+      transform: translate(0, 10%);
+      text-align: center;
+      width: auto;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
     }
   }
 
@@ -2004,7 +2077,7 @@
     background-color: #edf1f4;
     border-left: 6px solid #a3bbc8;
     & + * {
-      margin-top: 40px;
+      margin-top: 5%;
     }
     p {
       color: #243f4d;
@@ -2107,16 +2180,13 @@
     align-items: center;
   }
 
-  &__user-sharelink {
-    path {
-      transition: all 0.2s;
-    }
+  &__user-sharelink svg {
+    fill: $footer;
+    transition: all 0.2s;
   }
 
-  &__user-sharelink:hover {
-    path {
-      fill: $accent;
-    }
+  &__user-sharelink:hover svg {
+    fill: $accent;
   }
 
   &__comments {
@@ -2132,7 +2202,7 @@
     font-size: 24px;
     line-height: 1.5;
     color: #436372;
-    margin-bottom: 50px;
+    margin-bottom: 6%;
   }
 
   &__contact-box {
@@ -2181,10 +2251,10 @@
     background-color: $accent;
     color: #fff;
     max-width: 275px;
-    margin-top: -70px;
-    margin-bottom: 40px;
     position: relative;
     z-index: 2;
+    margin-top: -70px;
+    margin-bottom: 5%;
   }
 
   &__date,
@@ -2228,7 +2298,7 @@
     font-size: 36px;
     line-height: 1.2;
     color: $title3;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
   }
 
   &__subtitle {
@@ -2241,7 +2311,7 @@
   &__text {
     line-height: 1.9;
     &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 5%;
     }
   }
 }
@@ -2549,7 +2619,7 @@
 // --start--Team---------------
 
 .team {
-  padding: 120px 0 30px; 
+  padding: 120px 0 30px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -2591,9 +2661,6 @@
     flex: 0 1 48%;
   }
 
-  &__fotos-inner {
-  }
-
   &__photos-img {
     object-fit: cover;
     object-position: center;
@@ -2607,7 +2674,7 @@
     padding: 25px;
     max-width: 320px;
     background-color: #fff;
-    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);    
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     position: relative;
     z-index: 1;
     margin-top: -50px;
@@ -2638,29 +2705,19 @@
     height: 42px;
     border-radius: 50%;
     background-color: #f6f6f6;
-    & path {
+    svg {
       fill: #929292;
-      transition: fill .3s;
+      transition: fill 0.3s;
+    }
+    svg:hover {
+      fill: $accent;
     }
     &:not(:last-child) {
       margin-right: 15px;
     }
-    &:hover path {
-      fill: $accent;
-    }
   }
+}
 
-  &__photos-google-link {
-  }
-}
-.container {
-}
-.link-btn {
-}
 // --end----Team---------------
-
-
-
-
 
 @import "media";

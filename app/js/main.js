@@ -78,11 +78,43 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        setting: {
+          draggable: true,
+        }
+      },
+    ]
   });
 
   $(".details-products__inner").slick({
     slidesToShow: 4,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 501,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $(".filter-price__input").ionRangeSlider({
@@ -129,23 +161,8 @@ $(function () {
     mobileNavList.classList.toggle("active");
   });
   // ----Mobile Button finish------------------------
-  const productFilter = document.querySelector('.filter');
-  const filterBtn = document.querySelector('.product__filter-btn');
 
-  filterBtn.addEventListener('click', function() {
-    productFilter.classList.toggle('block');
-    document.body.classList.toggle('no-scroll');
-  });
-
-  // ====Filer start==================================================
-
-
-  // ====Filer finish==================================================
-
-
-
-
-
+  
   // -----***--this Tabs native JS--start***-----------------
   // const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
   //   const header = document.querySelector(headerSelector),

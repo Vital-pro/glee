@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <title>glee</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -87,21 +88,40 @@
       </ul>
     </nav>
     <div class="header__user-nav user-nav">
-      <a class="user-nav__link-search" href="#">
-        <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon">
-      </a>
+
+      <div class="user-nav__link-search user-nav__container-search">
+        <form class="user-nav__form-search">
+        <input class="user-nav__input-search" type="text" placeholder="Search...">
+        <button class="user-nav__btn-search">
+          <svg>
+          <use xlink:href="images/icons/sprite.svg#search"></use>
+        </svg>
+      </button>
+      </form>
+        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->       
+      </div>
+
       <div class="user-nav__icons">
         <a class="user-nav__link-heart" href="#">
           <span class="user-nav__num">3</span>
-          <img class="user-nav__img-heart" src="images/icons/heart.svg" alt="user icon heart">
+          <!-- <img class="user-nav__img-heart" src="images/icons/heart.svg" alt="user icon heart"> -->
+          <svg width="20" height="20">
+            <use xlink:href="images/icons/sprite.svg#heart"></use>
+          </svg>
         </a>
         <a class="user-nav__link-cart" href="#">
           <span class="user-nav__num">7</span>
-          <img class="user-nav__img-cart" src="images/icons/cart.svg" alt="user icon cart">
+          <!-- <img class="user-nav__img-cart" src="images/icons/cart.svg" alt="user icon cart"> -->
+          <svg width="22" height="20">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
         </a>
       </div>
       <a class="user-nav__link-popup" href="#">
-        <img class="user-nav__img-popup" src="images/icons/popup.svg" alt="user icon popup">
+        <!-- <img class="user-nav__img-popup" src="images/icons/popup.svg" alt="user icon popup"> -->
+        <svg width="50.66" height="50.656">
+          <use xlink:href="images/icons/sprite.svg#popup"></use>
+        </svg>
       </a>
     </div>
     <button class="header__mobile-btn" type="button">
@@ -111,30 +131,39 @@
 </header>
     <ul class="header-mobile__list">
       <li class="header-mobile__item">
-        <a href="#" class="header-mobile__link menu__link">Home</a>
+        <a href="index.html" class="header-mobile__link menu__link">Home</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">News</a>
+        <a href="product-1.html" class="header-mobile__link menu__link">Products</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">Services</a>
+        <a href="blog-details.html" class="header-mobile__link menu__link">News</a>
       </li>
       <li class="header-mobile__item">
-        <a href="#!" class="header-mobile__link menu__link">Contact</a>
+        <a href="contact.html" class="header-mobile__link menu__link">Contact</a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link">
-          <img class="header-mobile__search-img" src="images/icons/search.svg" alt="search icon">
+          <!-- <img class="header-mobile__search-img" src="images/icons/search.svg" alt="search icon"> -->
+          <svg width="50.66" height="50.656">
+            <use xlink:href="images/icons/sprite.svg#search"></use>
+          </svg>
         </a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link--user">
-          <img class="header-mobile__cart-img" src="images/icons/cart.svg" alt="user icon cart">
+          <!-- <img class="header-mobile__cart-img" src="images/icons/cart.svg" alt="user icon cart"> -->
+          <svg width="22" height="20">
+            <use xlink:href="images/icons/sprite.svg#cart"></use>
+          </svg>
         </a>
       </li>
       <li class="header-mobile__item">
         <a href="#!" class="header-mobile__link--user">
-          <img class="header-mobile__heart-img" src="images/icons/heart.svg" alt="user icon heart">
+          <!-- <img class="header-mobile__heart-img" src="images/icons/heart.svg" alt="user icon heart"> -->
+          <svg width="20" height="20">
+            <use xlink:href="images/icons/sprite.svg#heart"></use>
+          </svg>
         </a>
       </li>
     </ul>
@@ -252,18 +281,14 @@
                     <span class="team__photos-name">Eliza Elliot</span>
                     <span class="team__photos-position">Commodo tempor</span>
                   </a>
-                  <a class="team__photos-link team__photos-link--insta" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"
-                      height="18px">
-                      <path
-                        d="M16.908,13.563 C16.375,15.523 15.095,16.683 13.111,17.002 C12.369,17.121 10.366,17.193 8.367,17.193 C6.320,17.193 4.276,17.118 3.588,16.939 C1.638,16.435 0.474,15.165 0.164,13.190 C-0.067,11.739 -0.091,4.999 0.328,3.536 C0.874,1.630 2.147,0.510 4.075,0.193 C4.949,0.050 6.658,-0.001 8.385,-0.001 C9.990,-0.001 11.609,0.043 12.584,0.097 C13.764,0.159 14.845,0.539 15.723,1.381 C16.559,2.182 16.987,3.183 17.095,4.316 C17.223,5.669 17.306,12.064 16.908,13.563 ZM15.547,4.461 C15.393,2.948 14.468,1.954 12.972,1.719 C12.231,1.607 10.447,1.557 8.672,1.557 C6.960,1.557 5.256,1.604 4.506,1.685 C3.006,1.857 1.998,2.783 1.759,4.275 C1.512,5.855 1.514,11.767 1.699,12.955 C1.890,14.191 2.588,15.040 3.821,15.385 C4.489,15.573 6.487,15.639 8.447,15.639 C10.250,15.639 12.022,15.583 12.687,15.510 C14.201,15.344 15.202,14.412 15.441,12.907 C15.688,11.394 15.688,5.877 15.547,4.461 ZM13.209,5.055 C12.636,5.048 12.184,4.585 12.188,4.019 C12.192,3.450 12.651,2.990 13.219,2.990 L13.231,2.990 C13.798,2.990 14.257,3.453 14.252,4.026 C14.248,4.592 13.782,5.055 13.209,5.055 ZM8.563,13.010 C6.125,13.010 4.172,11.035 4.191,8.597 C4.210,6.160 6.200,4.184 8.637,4.191 C11.068,4.191 13.028,6.167 13.009,8.604 C12.991,11.035 11.000,13.010 8.563,13.010 ZM8.646,5.745 L8.620,5.745 C7.057,5.745 5.771,7.004 5.744,8.570 C5.719,10.144 6.973,11.436 8.547,11.449 L8.573,11.449 C10.135,11.449 11.423,10.191 11.449,8.625 C11.474,7.043 10.220,5.759 8.646,5.745 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#insta"></use>
                     </svg>
                   </a>
-                  <a class="team__photos-link team__photos-link--google" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
-                      height="15px">
-                      <path
-                        d="M22.691,5.835 L22.691,5.904 L22.677,7.720 L22.676,7.796 L22.601,7.796 L20.170,7.796 L20.152,10.227 L20.151,10.296 L20.082,10.296 L18.259,10.296 L18.190,10.296 L18.190,10.227 L18.209,7.796 L15.778,7.796 L15.702,7.796 L15.703,7.720 L15.717,5.904 L15.717,5.835 L15.793,5.835 L18.224,5.835 L18.242,3.397 L18.243,3.328 L18.312,3.328 L20.135,3.328 L20.204,3.328 L20.203,3.397 L20.185,5.835 L22.616,5.835 L22.691,5.835 ZM9.107,14.115 C8.469,14.280 7.821,14.361 7.168,14.361 C7.029,14.361 6.890,14.357 6.751,14.350 C5.342,14.267 4.062,13.825 2.928,12.989 C1.466,11.912 0.545,10.475 0.158,8.701 C0.017,8.058 -0.033,7.416 0.020,6.767 C0.122,5.234 0.657,3.860 1.640,2.665 C2.658,1.415 3.955,0.600 5.505,0.207 C5.899,0.103 6.294,0.041 6.695,0.021 C6.922,0.013 7.150,-0.000 7.378,-0.000 C8.593,0.013 9.731,0.318 10.776,0.932 C11.477,1.333 11.874,1.740 12.045,1.864 C11.329,2.569 10.641,3.259 9.938,3.950 C9.416,3.500 8.839,3.087 7.839,2.934 C7.632,2.905 7.427,2.890 7.226,2.890 C5.219,2.890 3.538,4.341 3.090,6.243 C2.983,6.670 2.953,7.106 2.990,7.541 C3.143,9.309 4.326,10.759 5.925,11.277 C6.332,11.405 6.754,11.466 7.179,11.466 C7.278,11.466 7.377,11.463 7.477,11.457 C8.230,11.408 8.935,11.208 9.575,10.786 C10.650,10.054 10.998,8.908 11.000,8.625 L7.154,8.625 C7.154,8.530 7.168,6.733 7.175,5.855 L7.182,5.738 L13.936,5.738 C14.300,7.845 13.972,10.061 12.661,11.794 C11.754,12.989 10.547,13.742 9.107,14.115 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#google"></use>
                     </svg>
                   </a>
                 </div>
@@ -277,18 +302,14 @@
                     <span class="team__photos-name">Roscoe A.</span>
                     <span class="team__photos-position">Commodo tempor</span>
                   </a>
-                  <a class="team__photos-link team__photos-link--insta" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"
-                      height="18px">
-                      <path
-                        d="M16.908,13.563 C16.375,15.523 15.095,16.683 13.111,17.002 C12.369,17.121 10.366,17.193 8.367,17.193 C6.320,17.193 4.276,17.118 3.588,16.939 C1.638,16.435 0.474,15.165 0.164,13.190 C-0.067,11.739 -0.091,4.999 0.328,3.536 C0.874,1.630 2.147,0.510 4.075,0.193 C4.949,0.050 6.658,-0.001 8.385,-0.001 C9.990,-0.001 11.609,0.043 12.584,0.097 C13.764,0.159 14.845,0.539 15.723,1.381 C16.559,2.182 16.987,3.183 17.095,4.316 C17.223,5.669 17.306,12.064 16.908,13.563 ZM15.547,4.461 C15.393,2.948 14.468,1.954 12.972,1.719 C12.231,1.607 10.447,1.557 8.672,1.557 C6.960,1.557 5.256,1.604 4.506,1.685 C3.006,1.857 1.998,2.783 1.759,4.275 C1.512,5.855 1.514,11.767 1.699,12.955 C1.890,14.191 2.588,15.040 3.821,15.385 C4.489,15.573 6.487,15.639 8.447,15.639 C10.250,15.639 12.022,15.583 12.687,15.510 C14.201,15.344 15.202,14.412 15.441,12.907 C15.688,11.394 15.688,5.877 15.547,4.461 ZM13.209,5.055 C12.636,5.048 12.184,4.585 12.188,4.019 C12.192,3.450 12.651,2.990 13.219,2.990 L13.231,2.990 C13.798,2.990 14.257,3.453 14.252,4.026 C14.248,4.592 13.782,5.055 13.209,5.055 ZM8.563,13.010 C6.125,13.010 4.172,11.035 4.191,8.597 C4.210,6.160 6.200,4.184 8.637,4.191 C11.068,4.191 13.028,6.167 13.009,8.604 C12.991,11.035 11.000,13.010 8.563,13.010 ZM8.646,5.745 L8.620,5.745 C7.057,5.745 5.771,7.004 5.744,8.570 C5.719,10.144 6.973,11.436 8.547,11.449 L8.573,11.449 C10.135,11.449 11.423,10.191 11.449,8.625 C11.474,7.043 10.220,5.759 8.646,5.745 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#insta"></use>
                     </svg>
                   </a>
-                  <a class="team__photos-link team__photos-link--google" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
-                      height="15px">
-                      <path
-                        d="M22.691,5.835 L22.691,5.904 L22.677,7.720 L22.676,7.796 L22.601,7.796 L20.170,7.796 L20.152,10.227 L20.151,10.296 L20.082,10.296 L18.259,10.296 L18.190,10.296 L18.190,10.227 L18.209,7.796 L15.778,7.796 L15.702,7.796 L15.703,7.720 L15.717,5.904 L15.717,5.835 L15.793,5.835 L18.224,5.835 L18.242,3.397 L18.243,3.328 L18.312,3.328 L20.135,3.328 L20.204,3.328 L20.203,3.397 L20.185,5.835 L22.616,5.835 L22.691,5.835 ZM9.107,14.115 C8.469,14.280 7.821,14.361 7.168,14.361 C7.029,14.361 6.890,14.357 6.751,14.350 C5.342,14.267 4.062,13.825 2.928,12.989 C1.466,11.912 0.545,10.475 0.158,8.701 C0.017,8.058 -0.033,7.416 0.020,6.767 C0.122,5.234 0.657,3.860 1.640,2.665 C2.658,1.415 3.955,0.600 5.505,0.207 C5.899,0.103 6.294,0.041 6.695,0.021 C6.922,0.013 7.150,-0.000 7.378,-0.000 C8.593,0.013 9.731,0.318 10.776,0.932 C11.477,1.333 11.874,1.740 12.045,1.864 C11.329,2.569 10.641,3.259 9.938,3.950 C9.416,3.500 8.839,3.087 7.839,2.934 C7.632,2.905 7.427,2.890 7.226,2.890 C5.219,2.890 3.538,4.341 3.090,6.243 C2.983,6.670 2.953,7.106 2.990,7.541 C3.143,9.309 4.326,10.759 5.925,11.277 C6.332,11.405 6.754,11.466 7.179,11.466 C7.278,11.466 7.377,11.463 7.477,11.457 C8.230,11.408 8.935,11.208 9.575,10.786 C10.650,10.054 10.998,8.908 11.000,8.625 L7.154,8.625 C7.154,8.530 7.168,6.733 7.175,5.855 L7.182,5.738 L13.936,5.738 C14.300,7.845 13.972,10.061 12.661,11.794 C11.754,12.989 10.547,13.742 9.107,14.115 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#google"></use>
                     </svg>
                   </a>
                 </div>
@@ -301,18 +322,14 @@
                     <span class="team__photos-name">Ruby M.</span>
                     <span class="team__photos-position">Commodo tempor</span>
                   </a>
-                  <a class="team__photos-link team__photos-link--insta" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"
-                      height="18px">
-                      <path
-                        d="M16.908,13.563 C16.375,15.523 15.095,16.683 13.111,17.002 C12.369,17.121 10.366,17.193 8.367,17.193 C6.320,17.193 4.276,17.118 3.588,16.939 C1.638,16.435 0.474,15.165 0.164,13.190 C-0.067,11.739 -0.091,4.999 0.328,3.536 C0.874,1.630 2.147,0.510 4.075,0.193 C4.949,0.050 6.658,-0.001 8.385,-0.001 C9.990,-0.001 11.609,0.043 12.584,0.097 C13.764,0.159 14.845,0.539 15.723,1.381 C16.559,2.182 16.987,3.183 17.095,4.316 C17.223,5.669 17.306,12.064 16.908,13.563 ZM15.547,4.461 C15.393,2.948 14.468,1.954 12.972,1.719 C12.231,1.607 10.447,1.557 8.672,1.557 C6.960,1.557 5.256,1.604 4.506,1.685 C3.006,1.857 1.998,2.783 1.759,4.275 C1.512,5.855 1.514,11.767 1.699,12.955 C1.890,14.191 2.588,15.040 3.821,15.385 C4.489,15.573 6.487,15.639 8.447,15.639 C10.250,15.639 12.022,15.583 12.687,15.510 C14.201,15.344 15.202,14.412 15.441,12.907 C15.688,11.394 15.688,5.877 15.547,4.461 ZM13.209,5.055 C12.636,5.048 12.184,4.585 12.188,4.019 C12.192,3.450 12.651,2.990 13.219,2.990 L13.231,2.990 C13.798,2.990 14.257,3.453 14.252,4.026 C14.248,4.592 13.782,5.055 13.209,5.055 ZM8.563,13.010 C6.125,13.010 4.172,11.035 4.191,8.597 C4.210,6.160 6.200,4.184 8.637,4.191 C11.068,4.191 13.028,6.167 13.009,8.604 C12.991,11.035 11.000,13.010 8.563,13.010 ZM8.646,5.745 L8.620,5.745 C7.057,5.745 5.771,7.004 5.744,8.570 C5.719,10.144 6.973,11.436 8.547,11.449 L8.573,11.449 C10.135,11.449 11.423,10.191 11.449,8.625 C11.474,7.043 10.220,5.759 8.646,5.745 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#insta"></use>
                     </svg>
                   </a>
-                  <a class="team__photos-link team__photos-link--google" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
-                      height="15px">
-                      <path
-                        d="M22.691,5.835 L22.691,5.904 L22.677,7.720 L22.676,7.796 L22.601,7.796 L20.170,7.796 L20.152,10.227 L20.151,10.296 L20.082,10.296 L18.259,10.296 L18.190,10.296 L18.190,10.227 L18.209,7.796 L15.778,7.796 L15.702,7.796 L15.703,7.720 L15.717,5.904 L15.717,5.835 L15.793,5.835 L18.224,5.835 L18.242,3.397 L18.243,3.328 L18.312,3.328 L20.135,3.328 L20.204,3.328 L20.203,3.397 L20.185,5.835 L22.616,5.835 L22.691,5.835 ZM9.107,14.115 C8.469,14.280 7.821,14.361 7.168,14.361 C7.029,14.361 6.890,14.357 6.751,14.350 C5.342,14.267 4.062,13.825 2.928,12.989 C1.466,11.912 0.545,10.475 0.158,8.701 C0.017,8.058 -0.033,7.416 0.020,6.767 C0.122,5.234 0.657,3.860 1.640,2.665 C2.658,1.415 3.955,0.600 5.505,0.207 C5.899,0.103 6.294,0.041 6.695,0.021 C6.922,0.013 7.150,-0.000 7.378,-0.000 C8.593,0.013 9.731,0.318 10.776,0.932 C11.477,1.333 11.874,1.740 12.045,1.864 C11.329,2.569 10.641,3.259 9.938,3.950 C9.416,3.500 8.839,3.087 7.839,2.934 C7.632,2.905 7.427,2.890 7.226,2.890 C5.219,2.890 3.538,4.341 3.090,6.243 C2.983,6.670 2.953,7.106 2.990,7.541 C3.143,9.309 4.326,10.759 5.925,11.277 C6.332,11.405 6.754,11.466 7.179,11.466 C7.278,11.466 7.377,11.463 7.477,11.457 C8.230,11.408 8.935,11.208 9.575,10.786 C10.650,10.054 10.998,8.908 11.000,8.625 L7.154,8.625 C7.154,8.530 7.168,6.733 7.175,5.855 L7.182,5.738 L13.936,5.738 C14.300,7.845 13.972,10.061 12.661,11.794 C11.754,12.989 10.547,13.742 9.107,14.115 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#google"></use>
                     </svg>
                   </a>
                 </div>
@@ -325,18 +342,14 @@
                     <span class="team__photos-name">Marie F. Bloss</span>
                     <span class="team__photos-position">Commodo tempor</span>
                   </a>
-                  <a class="team__photos-link team__photos-link--insta" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"
-                      height="18px">
-                      <path
-                        d="M16.908,13.563 C16.375,15.523 15.095,16.683 13.111,17.002 C12.369,17.121 10.366,17.193 8.367,17.193 C6.320,17.193 4.276,17.118 3.588,16.939 C1.638,16.435 0.474,15.165 0.164,13.190 C-0.067,11.739 -0.091,4.999 0.328,3.536 C0.874,1.630 2.147,0.510 4.075,0.193 C4.949,0.050 6.658,-0.001 8.385,-0.001 C9.990,-0.001 11.609,0.043 12.584,0.097 C13.764,0.159 14.845,0.539 15.723,1.381 C16.559,2.182 16.987,3.183 17.095,4.316 C17.223,5.669 17.306,12.064 16.908,13.563 ZM15.547,4.461 C15.393,2.948 14.468,1.954 12.972,1.719 C12.231,1.607 10.447,1.557 8.672,1.557 C6.960,1.557 5.256,1.604 4.506,1.685 C3.006,1.857 1.998,2.783 1.759,4.275 C1.512,5.855 1.514,11.767 1.699,12.955 C1.890,14.191 2.588,15.040 3.821,15.385 C4.489,15.573 6.487,15.639 8.447,15.639 C10.250,15.639 12.022,15.583 12.687,15.510 C14.201,15.344 15.202,14.412 15.441,12.907 C15.688,11.394 15.688,5.877 15.547,4.461 ZM13.209,5.055 C12.636,5.048 12.184,4.585 12.188,4.019 C12.192,3.450 12.651,2.990 13.219,2.990 L13.231,2.990 C13.798,2.990 14.257,3.453 14.252,4.026 C14.248,4.592 13.782,5.055 13.209,5.055 ZM8.563,13.010 C6.125,13.010 4.172,11.035 4.191,8.597 C4.210,6.160 6.200,4.184 8.637,4.191 C11.068,4.191 13.028,6.167 13.009,8.604 C12.991,11.035 11.000,13.010 8.563,13.010 ZM8.646,5.745 L8.620,5.745 C7.057,5.745 5.771,7.004 5.744,8.570 C5.719,10.144 6.973,11.436 8.547,11.449 L8.573,11.449 C10.135,11.449 11.423,10.191 11.449,8.625 C11.474,7.043 10.220,5.759 8.646,5.745 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#insta"></use>
                     </svg>
                   </a>
-                  <a class="team__photos-link team__photos-link--google" href="#!">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
-                      height="15px">
-                      <path
-                        d="M22.691,5.835 L22.691,5.904 L22.677,7.720 L22.676,7.796 L22.601,7.796 L20.170,7.796 L20.152,10.227 L20.151,10.296 L20.082,10.296 L18.259,10.296 L18.190,10.296 L18.190,10.227 L18.209,7.796 L15.778,7.796 L15.702,7.796 L15.703,7.720 L15.717,5.904 L15.717,5.835 L15.793,5.835 L18.224,5.835 L18.242,3.397 L18.243,3.328 L18.312,3.328 L20.135,3.328 L20.204,3.328 L20.203,3.397 L20.185,5.835 L22.616,5.835 L22.691,5.835 ZM9.107,14.115 C8.469,14.280 7.821,14.361 7.168,14.361 C7.029,14.361 6.890,14.357 6.751,14.350 C5.342,14.267 4.062,13.825 2.928,12.989 C1.466,11.912 0.545,10.475 0.158,8.701 C0.017,8.058 -0.033,7.416 0.020,6.767 C0.122,5.234 0.657,3.860 1.640,2.665 C2.658,1.415 3.955,0.600 5.505,0.207 C5.899,0.103 6.294,0.041 6.695,0.021 C6.922,0.013 7.150,-0.000 7.378,-0.000 C8.593,0.013 9.731,0.318 10.776,0.932 C11.477,1.333 11.874,1.740 12.045,1.864 C11.329,2.569 10.641,3.259 9.938,3.950 C9.416,3.500 8.839,3.087 7.839,2.934 C7.632,2.905 7.427,2.890 7.226,2.890 C5.219,2.890 3.538,4.341 3.090,6.243 C2.983,6.670 2.953,7.106 2.990,7.541 C3.143,9.309 4.326,10.759 5.925,11.277 C6.332,11.405 6.754,11.466 7.179,11.466 C7.278,11.466 7.377,11.463 7.477,11.457 C8.230,11.408 8.935,11.208 9.575,10.786 C10.650,10.054 10.998,8.908 11.000,8.625 L7.154,8.625 C7.154,8.530 7.168,6.733 7.175,5.855 L7.182,5.738 L13.936,5.738 C14.300,7.845 13.972,10.061 12.661,11.794 C11.754,12.989 10.547,13.742 9.107,14.115 Z" />
+                  <a class="team__photos-link" href="#!">
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#google"></use>
                     </svg>
                   </a>
                 </div>
@@ -344,32 +357,25 @@
             </div>
           </div>
         </div>
+      </section>
 
-  </div>
-  </div>
-  </section>
-
-
-
-
-
-  <section class="page__articles articles" id="articles">
+      <section class="page__articles articles" id="articles">
   <div class="container">
     <div class="articles__header">
       <h3 class="articles__title">Our Insights & Articles</h3>
-      <a class="articles__link" href="#!">View All</a>
+      <a class="articles__link" href="blog-details.html">View All</a>
     </div>
     <div class="articles__items">
 
       <div class="articles__item">
-        <img class="articles__item-img" src="images/articles/1.jpg" alt="photo interior">
+        <img class="articles__item-img" src="images/articles/3.jpg" alt="photo interior">
         <div class="articles__item-inner">
           <a class="articles__item-link" href="#!">news</a>
           <p class="articles__item-text">
             Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
           </p>
           <div class="articles__item-author">
-            <time>28 january, 2021</time>
+            <time datetime="2022-08-21">28 january, 2021</time>
             <span>by admin</span>
           </div>
         </div>
@@ -382,20 +388,20 @@
             Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           </p>
           <div class="articles__item-author">
-            <time>28 january, 2021</time>
+            <time datetime="2022-08-21">28 january, 2021</time>
             <span>by admin</span>
           </div>
         </div>
       </div>
       <div class="articles__item">
-        <img class="articles__item-img" src="images/articles/3.jpg" alt="photo interior">
+        <img class="articles__item-img" src="images/articles/1.jpg" alt="photo interior">
         <div class="articles__item-inner">
           <a class="articles__item-link" href="#!">news</a>
           <p class="articles__item-text">
             Rncididunt ut labore et dolore magna aliqua. Ut enim
           </p>
           <div class="articles__item-author">
-            <time>28 january, 2021</time>
+            <time datetime="2022-08-21">28 january, 2021</time>
             <span>by admin</span>
           </div>
         </div>
@@ -404,9 +410,9 @@
   </div>
 </section>
 
-  <div class="page__partners partners">
-    <div class="partners__container container">
-      <ul class="partners__list">
+      <div class="page__partners partners">
+        <div class="partners__container container">
+          <ul class="partners__list">
   <li><img class="partners__img" src="images/partners/1.png" alt="patner logo">
   </li>
   <li><img class="partners__img" src="images/partners/2.png" alt="patner logo">
@@ -418,10 +424,10 @@
   <li><img class="partners__img" src="images/partners/5.png" alt="patner logo">
   </li>
 </ul>
-    </div>
-  </div>
-  </main>
-  <footer class="footer">
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
   <div class="container">
 
     <div class="footer__top">
@@ -439,19 +445,19 @@
         <h6 class="footer__top-title">Services</h6>
         <ul class="footer__top-list">
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">About us</a>
+            <a class="footer__top-link" href="about.html">About us</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Return Policy</a>
+            <a class="footer__top-link" href="blog-details.html">Our Blog</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Our Blog</a>
+            <a class="footer__top-link" href="product-1.html">Produts</a>
+          </li>    
+          <li class="footer__top-item">
+            <a class="footer__top-link" href="product-details.html">Exclusive</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Contact Us</a>
-          </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Terms & Condition</a>
+            <a class="footer__top-link" href="conditions.html">Terms & Condition</a>
           </li>
         </ul>
       </div>
@@ -459,16 +465,16 @@
         <h6 class="footer__top-title">Account</h6>
         <ul class="footer__top-list">
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Your Account</a>
+            <a class="footer__top-link" href="login.html">Your Account</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Checkout</a>
+            <a class="footer__top-link" href="contact.html">Contact Us</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Login</a>
+            <a class="footer__top-link" href="login.html">Login</a>
           </li>
           <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Register</a>
+            <a class="footer__top-link" href="contact.html">Register</a>
           </li>
         </ul>
       </div>
@@ -490,16 +496,16 @@
       </p>
       <ul class="footer__bottom-menu">
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Home</a>
+          <a class="footer__bottom-limk" href="index.html">Home</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">About</a>
+          <a class="footer__bottom-limk" href="about.html">About</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Blog</a>
+          <a class="footer__bottom-limk" href="blog.html">Blog</a>
         </li>
         <li class="footer__bottom-item">
-          <a class="footer__bottom-limk" href="#">Contact</a>
+          <a class="footer__bottom-limk" href="contact.html">Contact</a>
         </li>
       </ul>
     </div>

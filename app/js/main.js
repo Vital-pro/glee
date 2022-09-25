@@ -1,6 +1,6 @@
 // "use strict";
 // window.addEventListener("DOMContentLoaded", () => {
-$(function () {
+  $(function () {
   $(".blog-body__slider").slick({
     prevArrow:
       '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height="30px" viewBox="0 0 15 30" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:rgb(255%,255%,255%);fill-opacity:1;" d="M 11.25 26.25 C 10.769531 26.25 10.289062 26.066406 9.925781 25.699219 L 0.550781 16.324219 C -0.183594 15.59375 -0.183594 14.40625 0.550781 13.675781 L 9.925781 4.300781 C 10.65625 3.566406 11.84375 3.566406 12.574219 4.300781 C 13.308594 5.03125 13.308594 6.21875 12.574219 6.949219 L 4.527344 15 L 12.578125 23.050781 C 13.308594 23.78125 13.308594 24.96875 12.578125 25.703125 C 12.210938 26.070312 11.730469 26.25 11.25 26.25 Z M 11.25 26.25 "/></g></svg></button>',
@@ -19,13 +19,11 @@ $(function () {
   //   $('.details-tabs__content-item').removeClass('details-tabs__content-item--active');
   //   $($(this).attr('href')).addClass('details-tabs__content-item--active');
 
-  // });  
+  // });
 
   // ====================Tabs Product-detailes--Finish===============
 
-
-
-// ===Plagin styler for select=====start===============================
+  // ===Plagin styler for select=====start===============================
   $(".select-style, .details-item__content-input").styler();
 
   $(".product-content__filter-btn").on("click", function () {
@@ -83,9 +81,9 @@ $(function () {
         breakpoint: 768,
         setting: {
           draggable: true,
-        }
+        },
       },
-    ]
+    ],
   });
 
   $(".details-products__inner").slick({
@@ -98,24 +96,34 @@ $(function () {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-        }
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
-        }
+          slidesToScroll: 2,
+        },
       },
       {
         breakpoint: 501,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
+
+  $('[data-fancybox]').fancybox({
+    youtube : {
+        controls : 1,
+        showinfo : 0
+    },
+    vimeo : {
+        color : 'f00'
+    }
+});
 
   $(".filter-price__input").ionRangeSlider({
     type: "double",
@@ -143,134 +151,146 @@ $(function () {
 // }
 // ======finish mixitup===================================================
 
+// ========-Header--user-nav__input-search----start==========
+const userNavBtnSearch = document.querySelector('.user-nav__btn-search');
+const userNavInputSearch = document.querySelector('.user-nav__input-search');
+
+userNavBtnSearch.addEventListener('click', function(e) {
+  e.preventDefault();
+  userNavInputSearch.classList.toggle('active');
+  userNavInputSearch.focus();
+  userNavInputSearch.value='';
+});
+// =======-Header--user-nav__input-search----finish========
+
+
+
+
 // ----Mobile Button start------------------------
-  const mobileNavBtn = document.querySelector(".header__mobile-btn");
-  const mobileNavLine = document.querySelector(".header__mobile-line");
-  let mobileNavList = document.querySelector(".header-mobile__list");
-  let filterSelect = document.querySelector('.product-content__filter-selects');
+const mobileNavBtn = document.querySelector(".header__mobile-btn");
+const mobileNavLine = document.querySelector(".header__mobile-line");
+let mobileNavList = document.querySelector(".header-mobile__list");
+let filterSelect = document.querySelector(".product-content__filter-selects");
 
-  mobileNavBtn.addEventListener("click", function () {
-    document.body.classList.toggle('no-scroll');
-    mobileNavLine.classList.toggle("active");
-    mobileNavList.classList.toggle("active");
-  });
-  
-  mobileNavList.addEventListener("click", function () {
-    document.body.classList.toggle('no-scroll');
-    mobileNavLine.classList.toggle("active");
-    mobileNavList.classList.toggle("active");
-  });
-  // ----Mobile Button finish------------------------
+mobileNavBtn.addEventListener("click", function () {
+  document.body.classList.toggle("no-scroll");
+  mobileNavLine.classList.toggle("active");
+  mobileNavList.classList.toggle("active");
+});
 
-  
-  // -----***--this Tabs native JS--start***-----------------
-  // const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-  //   const header = document.querySelector(headerSelector),
-  //         tab = document.querySelectorAll(tabSelector),
-  //         content = document.querySelectorAll(contentSelector);
-  
-  //     function hideContent () {
-  //       content.forEach(item => {
-  //         item.style.display = 'none';
-  //       });
-  
-  //       tab.forEach(item => {
-  //         item.classList.remove(activeClass);
-  //       });
-  //     };
-  
-  //     function showContent (i = 2) {
-  //       content[i].style.display = 'block'; 
-  //       tab[i].classList.add(activeClass);  
-  //     }
-  
-  //     hideContent();
-  //     showContent();
-  
-  //     header.addEventListener('click', (e) => {
-  //       e.preventDefault();
-  //       const target = e.target;
-  //       if (target &&
-  //         (target.classList.contains(tabSelector.replace(/\./, '')) || 
-  //       target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
-  //         tab.forEach((item, i) => {
-  //           if (target == item || target.parentNode === item) {
-  //             hideContent();
-  //             showContent(i);
-  //           }
-  //         });
-  //       }
-  //     });
-  // };
-  
-  // tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
-   // -----***--this Tabs native JS--finish***-----------------
+mobileNavList.addEventListener("click", function () {
+  document.body.classList.toggle("no-scroll");
+  mobileNavLine.classList.toggle("active");
+  mobileNavList.classList.toggle("active");
+});
+// ----Mobile Button finish------------------------
 
+// -----***--this Tabs native JS--start***-----------------
+// const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+//   const header = document.querySelector(headerSelector),
+//         tab = document.querySelectorAll(tabSelector),
+//         content = document.querySelectorAll(contentSelector);
 
-    // --start----actual date start-------------
+//     function hideContent () {
+//       content.forEach(item => {
+//         item.style.display = 'none';
+//       });
 
-  // let today = new Date();
+//       tab.forEach(item => {
+//         item.classList.remove(activeClass);
+//       });
+//     };
 
-  // let date =
-  //   today.getDate() +
-  //   ". " +
-  //   ("0" + (new Date().getMonth() + 1)).slice(-2) +
-  //   ". " +
-  //   today.getFullYear();
-  // let date1 =
-  //   today.getDate() -
-  //   2 +
-  //   ". " +
-  //   ("0" + (new Date().getMonth() + 0)).slice(-2) +
-  //   ". " +
-  //   today.getFullYear();
-  // let date2 =
-  //   today.getDate() -
-  //   4 +
-  //   ". " +
-  //   ("0" + (new Date().getMonth() - 1)).slice(-2) +
-  //   ". " +
-  //   today.getFullYear();
-  // let date3 =
-  //   today.getDate() +
-  //   ". " +
-  //   ("0" + (new Date().getMonth() - 2)).slice(-2) +
-  //   ". " +
-  //   today.getFullYear();
+//     function showContent (i = 2) {
+//       content[i].style.display = 'block';
+//       tab[i].classList.add(activeClass);
+//     }
 
-  // document.getElementById("current_date").innerText = date;
-  // document.getElementById("current_date1").innerText = date1;
-  // document.getElementById("current_date2").innerText = date2;
-  // document.getElementById("current_date3").innerText = date3;
+//     hideContent();
+//     showContent();
 
-  // document.getElementById("current_date-aside").innerText = date;
-  // document.getElementById("current_date-aside1").innerText = date1;
-  // document.getElementById("current_date-aside2").innerText = date2;
-  // document.getElementById("current_date-aside3").innerText = date3;
+//     header.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       const target = e.target;
+//       if (target &&
+//         (target.classList.contains(tabSelector.replace(/\./, '')) ||
+//       target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+//         tab.forEach((item, i) => {
+//           if (target == item || target.parentNode === item) {
+//             hideContent();
+//             showContent(i);
+//           }
+//         });
+//       }
+//     });
+// };
 
-  // --finish --actual date -------------
+// tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
+// -----***--this Tabs native JS--finish***-----------------
 
-  // =======Time ==start=========================================================
+// --start----actual date start-------------
 
-  // let today = new Date();
+// let today = new Date();
 
-  // let date = today.getDate()+'. '+("0" + ((new Date()).getMonth()+1)).slice(-2)+'. '+today.getFullYear();
-  // let date1 = (today.getDate()-6)+'. '+("0" + ((new Date()).getMonth()+0)).slice(-2)+'. '+today.getFullYear();
-  // let date2 = (today.getDate()-3)+'. '+("0" + ((new Date()).getMonth()-1)).slice(-2)+'. '+today.getFullYear();
-  // let date3 = today.getDate()+'. '+("0" + ((new Date()).getMonth()-2)).slice(-2)+'. '+today.getFullYear();
+// let date =
+//   today.getDate() +
+//   ". " +
+//   ("0" + (new Date().getMonth() + 1)).slice(-2) +
+//   ". " +
+//   today.getFullYear();
+// let date1 =
+//   today.getDate() -
+//   2 +
+//   ". " +
+//   ("0" + (new Date().getMonth() + 0)).slice(-2) +
+//   ". " +
+//   today.getFullYear();
+// let date2 =
+//   today.getDate() -
+//   4 +
+//   ". " +
+//   ("0" + (new Date().getMonth() - 1)).slice(-2) +
+//   ". " +
+//   today.getFullYear();
+// let date3 =
+//   today.getDate() +
+//   ". " +
+//   ("0" + (new Date().getMonth() - 2)).slice(-2) +
+//   ". " +
+//   today.getFullYear();
 
-  // $('.tabs-comments__date')[0].innerText = date;
-  // $('.tabs-comments__date')[1].innerText = date1;
-  // $('.tabs-comments__date')[2].innerText = date2;
-  // $('.tabs-comments__date')[3].innerText = date3;
+// document.getElementById("current_date").innerText = date;
+// document.getElementById("current_date1").innerText = date1;
+// document.getElementById("current_date2").innerText = date2;
+// document.getElementById("current_date3").innerText = date3;
 
-  // =======Time ==finish=========================================================
+// document.getElementById("current_date-aside").innerText = date;
+// document.getElementById("current_date-aside1").innerText = date1;
+// document.getElementById("current_date-aside2").innerText = date2;
+// document.getElementById("current_date-aside3").innerText = date3;
 
-  // document.getElementById("comments__date").innerText = date;
-  // document.getElementById("comments__date1").innerText = date1;
-  // document.getElementById("comments__date2").innerText = date2;
+// --finish --actual date -------------
 
-  // https://javascript.ru/forum/misc/65647-vyvod-nazvaniya-mesyaca.html  вывод названия месяца??
+// =======Time ==start=========================================================
+
+// let today = new Date();
+
+// let date = today.getDate()+'. '+("0" + ((new Date()).getMonth()+1)).slice(-2)+'. '+today.getFullYear();
+// let date1 = (today.getDate()-6)+'. '+("0" + ((new Date()).getMonth()+0)).slice(-2)+'. '+today.getFullYear();
+// let date2 = (today.getDate()-3)+'. '+("0" + ((new Date()).getMonth()-1)).slice(-2)+'. '+today.getFullYear();
+// let date3 = today.getDate()+'. '+("0" + ((new Date()).getMonth()-2)).slice(-2)+'. '+today.getFullYear();
+
+// $('.tabs-comments__date')[0].innerText = date;
+// $('.tabs-comments__date')[1].innerText = date1;
+// $('.tabs-comments__date')[2].innerText = date2;
+// $('.tabs-comments__date')[3].innerText = date3;
+
+// =======Time ==finish=========================================================
+
+// document.getElementById("comments__date").innerText = date;
+// document.getElementById("comments__date1").innerText = date1;
+// document.getElementById("comments__date2").innerText = date2;
+
+// https://javascript.ru/forum/misc/65647-vyvod-nazvaniya-mesyaca.html  вывод названия месяца??
 
 // });
-

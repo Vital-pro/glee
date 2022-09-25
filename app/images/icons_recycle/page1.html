@@ -88,19 +88,12 @@
       </ul>
     </nav>
     <div class="header__user-nav user-nav">
-
-      <div class="user-nav__link-search user-nav__container-search">
-        <form class="user-nav__form-search">
-        <input class="user-nav__input-search" type="text" placeholder="Search...">
-        <button class="user-nav__btn-search">
-          <svg>
+      <a class="user-nav__link-search" href="#">
+        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->
+        <svg width="50.66" height="50.656">
           <use xlink:href="images/icons/sprite.svg#search"></use>
         </svg>
-      </button>
-      </form>
-        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->       
-      </div>
-
+      </a>
       <div class="user-nav__icons">
         <a class="user-nav__link-heart" href="#">
           <span class="user-nav__num">3</span>
@@ -169,24 +162,76 @@
     </ul>
 
     <main class="page">
+
       <section class="page__top">
         <div class="page__top-breadcrumbs breadcrumbs">
           <div class="container">
             <h2 class="breadcrumbs__title">
-              Log in
+              Contact
             </h2>
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="index.html">Home</a>
               </li>
               <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#!"> Log in</a>
+                <a class="breadcrumbs__link" href="#!">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <div class="page__partners partners partners--login">
+      <section class="page__articles articles" id="articles">
+  <div class="container">
+    <div class="articles__header">
+      <h3 class="articles__title">Our Insights & Articles</h3>
+      <a class="articles__link" href="blog-details.html">View All</a>
+    </div>
+    <div class="articles__items">
+
+      <div class="articles__item">
+        <img class="articles__item-img" src="images/articles/1.jpg" alt="photo interior">
+        <div class="articles__item-inner">
+          <a class="articles__item-link" href="#!">news</a>
+          <p class="articles__item-text">
+            Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+          <div class="articles__item-author">
+            <time datetime="2022-08-21">28 january, 2021</time>
+            <span>by admin</span>
+          </div>
+        </div>
+      </div>
+      <div class="articles__item">
+        <img class="articles__item-img" src="images/articles/2.jpg" alt="photo interior">
+        <div class="articles__item-inner">
+          <a class="articles__item-link" href="#!">news</a>
+          <p class="articles__item-text">
+            Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          </p>
+          <div class="articles__item-author">
+            <time datetime="2022-08-21">28 january, 2021</time>
+            <span>by admin</span>
+          </div>
+        </div>
+      </div>
+      <div class="articles__item">
+        <img class="articles__item-img" src="images/articles/3.jpg" alt="photo interior">
+        <div class="articles__item-inner">
+          <a class="articles__item-link" href="#!">news</a>
+          <p class="articles__item-text">
+            Rncididunt ut labore et dolore magna aliqua. Ut enim
+          </p>
+          <div class="articles__item-author">
+            <time datetime="2022-08-21">28 january, 2021</time>
+            <span>by admin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>     
+    
+      <div class="page__partners partners">
         <div class="partners__container container">
           <ul class="partners__list">
   <li><img class="partners__img" src="images/partners/1.png" alt="patner logo">
@@ -202,6 +247,8 @@
 </ul>
         </div>
       </div>
+      
+
     </main>
     <footer class="footer">
   <div class="container">
@@ -286,7 +333,8 @@
       </ul>
     </div>
   </div>
-</footer>
+</footer>;
+    
   </div>
 
   <script src="js/main.min.js"></script>

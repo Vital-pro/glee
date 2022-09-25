@@ -88,12 +88,19 @@
       </ul>
     </nav>
     <div class="header__user-nav user-nav">
-      <a class="user-nav__link-search" href="#">
-        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->
-        <svg width="50.66" height="50.656">
+
+      <div class="user-nav__link-search user-nav__container-search">
+        <form class="user-nav__form-search">
+        <input class="user-nav__input-search" type="text" placeholder="Search...">
+        <button class="user-nav__btn-search">
+          <svg>
           <use xlink:href="images/icons/sprite.svg#search"></use>
         </svg>
-      </a>
+      </button>
+      </form>
+        <!-- <img class="user-nav__img-search" src="images/icons/search.svg" alt="search icon"> -->       
+      </div>
+
       <div class="user-nav__icons">
         <a class="user-nav__link-heart" href="#">
           <span class="user-nav__num">3</span>
@@ -191,7 +198,7 @@
           <div class="contact__items">
             <div class="contact__item">
               <a class="contact__item-link" href="#!">
-                <svg class="contact__item-svg">
+                <svg class="contact__item-svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
                   <use class="u1" xlink:href="images/icons/sprite.svg#contactaddress"></use>
                 </svg>
                 <!-- <svg width="193px" height="193px">
@@ -334,12 +341,12 @@
   <div class="container">
     <div class="articles__header">
       <h3 class="articles__title">Our Insights & Articles</h3>
-      <a class="articles__link" href="#!">View All</a>
+      <a class="articles__link" href="blog-details.html">View All</a>
     </div>
     <div class="articles__items">
 
       <div class="articles__item">
-        <img class="articles__item-img" src="images/articles/1.jpg" alt="photo interior">
+        <img class="articles__item-img" src="images/articles/3.jpg" alt="photo interior">
         <div class="articles__item-inner">
           <a class="articles__item-link" href="#!">news</a>
           <p class="articles__item-text">
@@ -365,7 +372,7 @@
         </div>
       </div>
       <div class="articles__item">
-        <img class="articles__item-img" src="images/articles/3.jpg" alt="photo interior">
+        <img class="articles__item-img" src="images/articles/1.jpg" alt="photo interior">
         <div class="articles__item-inner">
           <a class="articles__item-link" href="#!">news</a>
           <p class="articles__item-text">

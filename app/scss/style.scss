@@ -173,10 +173,45 @@
     border-radius: 25px;
   }
 
-  &__link-search svg {
+  &__link-search {
+    display: flex;
+    position: relative;
+  }
+
+  &__input-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 53px;
+    padding: 15px;
+    border-radius: 50px;
+    transition: all .3s;
+  }
+
+  &__input-search.active {
+    background-color: #edf1f4;
+    outline: currentColor;
+    color: currentColor;
+    position: absolute;
+    top: 0;
+    left: -260px;
+    padding: 15px;
+    width: 300px;
+    height: 53px;
+    border-radius: 50px;
+  }
+
+  &__btn-search {
+    position: relative;
     border-radius: 50%;
     fill: $link1;
     background-color: #edf1f4;
+    cursor: pointer;
+    & svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__link-heart {
@@ -399,6 +434,9 @@
   }
 
   &__link {
+    animation: buttonTopSlider 2s;
+    animation-delay: .2s;
+    animation-fill-mode: both, forwards, none;
     background-image: url("../images/icons/arrow-btn.svg");
     background-repeat: no-repeat;
     background-position: 75% 54%;
@@ -411,6 +449,7 @@
     min-height: 60px;
     background-color: $accent;
     padding: 0 100px 0 25px;
+    transform: translate(-300%);
     transition: background-position-x 0.5s, transform 0.5s,
       background-color 0.2s;
     &:hover {
@@ -461,6 +500,24 @@
 
   .slick-dots li:not(:last-child) {
     margin-right: 12px;
+  }
+}
+
+@keyframes buttonTopSlider {
+  from {
+    transform: translateX(-350%);
+  }
+
+  50% {
+    transform: translateX(70%);
+  }
+
+  75% {
+    transform: translateX(-5%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -622,10 +679,11 @@
 
   &__item-title {
     @extend %dmsans-500;
-    margin-bottom: 5px;
     font-size: 16px;
     line-height: 1.5;
     color: #243f4d;
+    white-space: nowrap;
+    margin-bottom: 5px;
   }
 
   &__item-price {
@@ -833,7 +891,7 @@
   &__link {
     width: 127px;
     height: 127px;
-    animation-name: StartButton;
+    animation-name: videoStartButton;
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
@@ -856,7 +914,7 @@
   }
 }
 
-@keyframes StartButton {
+@keyframes videoStartButton {
   0% {
     transform: scale(1);
   }
@@ -2163,6 +2221,7 @@
   }
 
   &__user-tags {
+    display: flex;
     color: $title3;
     margin-bottom: 15px;
     & span {

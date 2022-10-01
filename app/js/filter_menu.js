@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const productFilter = document.querySelector('.filter');
 const filterInnerListBtnAdaptive = document.querySelector('.product__inner-filter-btn');
 const filterPriceBtn = document.querySelector('.filter-price__btn');
@@ -18,4 +19,6 @@ filterPriceBtn.addEventListener('click', function() {
   filterBrandCheckbox.forEach((e) => {
     e.style.backgroundColor="#fff";
   });
+});
+
 });

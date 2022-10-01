@@ -1,3 +1,4 @@
+  document.addEventListener('DOMContentLoaded', function() {
   const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     const header = document.querySelector(headerSelector),
           tab = document.querySelectorAll(tabSelector),
@@ -38,3 +39,5 @@
   };
   
   tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
+
+});

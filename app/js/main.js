@@ -1,12 +1,97 @@
 // "use strict";
-// window.addEventListener("DOMContentLoaded", () => {
-  $(function () {
+window.addEventListener("DOMContentLoaded", () => {
+  $(function () { 
   $(".blog-body__slider").slick({
     prevArrow:
       '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height="30px" viewBox="0 0 15 30" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:rgb(255%,255%,255%);fill-opacity:1;" d="M 11.25 26.25 C 10.769531 26.25 10.289062 26.066406 9.925781 25.699219 L 0.550781 16.324219 C -0.183594 15.59375 -0.183594 14.40625 0.550781 13.675781 L 9.925781 4.300781 C 10.65625 3.566406 11.84375 3.566406 12.574219 4.300781 C 13.308594 5.03125 13.308594 6.21875 12.574219 6.949219 L 4.527344 15 L 12.578125 23.050781 C 13.308594 23.78125 13.308594 24.96875 12.578125 25.703125 C 12.210938 26.070312 11.730469 26.25 11.25 26.25 Z M 11.25 26.25 "/></g></svg></button>',
     nextArrow:
       '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15px" height="30px" viewBox="0 0 15 30" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:rgb(255%,255%,255%);fill-opacity:1;" d="M 3.75 26.25 C 3.269531 26.25 2.789062 26.066406 2.425781 25.699219 C 1.691406 24.96875 1.691406 23.78125 2.425781 23.050781 L 10.476562 15 L 2.425781 6.949219 C 1.691406 6.21875 1.691406 5.03125 2.425781 4.296875 C 3.15625 3.566406 4.34375 3.566406 5.074219 4.296875 L 14.449219 13.671875 C 15.183594 14.40625 15.183594 15.59375 14.449219 16.324219 L 5.074219 25.699219 C 4.710938 26.070312 4.230469 26.25 3.75 26.25 Z M 3.75 26.25 "/></g></svg></button>',
   });
+
+
+  let today = new Date();
+  const monthTitle = [
+  'января',
+  'февраля',
+  'марта',
+  'апреля',
+  'мая',
+  'июня',
+  'июля',
+  'августа',
+  'сентября',
+  'октября',
+  'ноября',
+  'декабря'
+];
+
+let time = document.querySelectorAll('time');
+
+for (let i = 0; i < time.length; i++) {
+  if (i === 0) {
+    time[i].innerText = formatTimePost1(today);
+  } else if (i === 1) {
+    time[i].innerText = formatTimePost2(today);
+  } else if (i === 2) {
+    time[i].innerText = formatTimePost3(today);
+  } else if (i === 3) {
+    time[i].innerText = formatTimePost4(today);
+  } else if (i === 4) {
+    time[i].innerText = formatTimePost1(today);
+  } else if (i === 5) {
+    time[i].innerText = formatTimePost2(today);
+  } else if (i === 6) {
+    time[i].innerText = formatTimePost3(today);
+  } else if (i === 7) {
+    time[i].innerText = formatTimePost4(today);
+  } 
+};
+
+// for (i = 0; i < 3; i++) {
+//   time[0].innerText = formatTimePost1(today);
+//   time[1].innerText = formatTimePost2(today);
+//   time[2].innerText = formatTimePost3(today);
+// }
+
+  function formatTimePost1(today) {
+    const date = (today.getDate()).toString().padStart(2, '0');
+    // const month = (today.getMonth() + 1).toString().padStart(2, '0'); так цифрами
+    const month = today.getMonth();  // 0 - 11 номер месяца
+    const year = today.getFullYear();
+
+    return `${date} ${monthTitle[month]} ${year}`
+  };
+
+  function formatTimePost2(today) {
+    today = new Date();
+    const date = (today.getDate(today.setDate((-7)))).toString().padStart(2, '0');
+    // const date = (today.getDate()).toString().padStart(2, '0');
+    // const month = (today.getMonth() + 1).toString().padStart(2, '0'); так цифрами
+    const month = today.getMonth();  // 0 - 11 номер месяца
+    const year = today.getFullYear();
+
+    return `${date} ${monthTitle[month]} ${year}`
+  };
+
+  function formatTimePost3(today) {
+    today = new Date();
+    const date = (today.getDate(today.setDate((-21)))).toString().padStart(2, '0');
+    const month = today.getMonth();  // 0 - 11 номер месяца
+    const year = today.getFullYear();
+
+    return `${date} ${monthTitle[month]} ${year}`
+  };
+
+  function formatTimePost4(today) {
+    today = new Date();
+    const date = (today.getDate(today.setDate((-35)))).toString().padStart(2, '0');
+    const month = today.getMonth();  // 0 - 11 номер месяца
+    const year = today.getFullYear();
+
+    return `${date} ${monthTitle[month]} ${year}`
+  };
+
+
 
   // ==================Tabs Product-detailes--START================
 
@@ -138,7 +223,7 @@
   });
 });
 
-// ======start mixitup===================================================
+// ======start mixitup====================================
 // var mixer = mixitup('.products-week__inner');
 
 // -------Пришлось скрипт обернуть в оператор if----------------
@@ -149,7 +234,7 @@
 // if (containerEl) {
 //   mixer = mixitup(".products-week__inner");
 // }
-// ======finish mixitup===================================================
+// ======finish mixitup===================================
 
 // ========-Header--user-nav__input-search----start==========
 const userNavBtnSearch = document.querySelector('.user-nav__btn-search');
@@ -162,8 +247,6 @@ userNavBtnSearch.addEventListener('click', function(e) {
   userNavInputSearch.value='';
 });
 // =======-Header--user-nav__input-search----finish========
-
-
 
 
 // ----Mobile Button start------------------------
@@ -228,69 +311,5 @@ mobileNavList.addEventListener("click", function () {
 // tabs('.details-tabs__top', '.details-tabs__title', '.details-tabs__content-item', 'details-tabs__title--active');
 // -----***--this Tabs native JS--finish***-----------------
 
-// --start----actual date start-------------
 
-// let today = new Date();
-
-// let date =
-//   today.getDate() +
-//   ". " +
-//   ("0" + (new Date().getMonth() + 1)).slice(-2) +
-//   ". " +
-//   today.getFullYear();
-// let date1 =
-//   today.getDate() -
-//   2 +
-//   ". " +
-//   ("0" + (new Date().getMonth() + 0)).slice(-2) +
-//   ". " +
-//   today.getFullYear();
-// let date2 =
-//   today.getDate() -
-//   4 +
-//   ". " +
-//   ("0" + (new Date().getMonth() - 1)).slice(-2) +
-//   ". " +
-//   today.getFullYear();
-// let date3 =
-//   today.getDate() +
-//   ". " +
-//   ("0" + (new Date().getMonth() - 2)).slice(-2) +
-//   ". " +
-//   today.getFullYear();
-
-// document.getElementById("current_date").innerText = date;
-// document.getElementById("current_date1").innerText = date1;
-// document.getElementById("current_date2").innerText = date2;
-// document.getElementById("current_date3").innerText = date3;
-
-// document.getElementById("current_date-aside").innerText = date;
-// document.getElementById("current_date-aside1").innerText = date1;
-// document.getElementById("current_date-aside2").innerText = date2;
-// document.getElementById("current_date-aside3").innerText = date3;
-
-// --finish --actual date -------------
-
-// =======Time ==start=========================================================
-
-// let today = new Date();
-
-// let date = today.getDate()+'. '+("0" + ((new Date()).getMonth()+1)).slice(-2)+'. '+today.getFullYear();
-// let date1 = (today.getDate()-6)+'. '+("0" + ((new Date()).getMonth()+0)).slice(-2)+'. '+today.getFullYear();
-// let date2 = (today.getDate()-3)+'. '+("0" + ((new Date()).getMonth()-1)).slice(-2)+'. '+today.getFullYear();
-// let date3 = today.getDate()+'. '+("0" + ((new Date()).getMonth()-2)).slice(-2)+'. '+today.getFullYear();
-
-// $('.tabs-comments__date')[0].innerText = date;
-// $('.tabs-comments__date')[1].innerText = date1;
-// $('.tabs-comments__date')[2].innerText = date2;
-// $('.tabs-comments__date')[3].innerText = date3;
-
-// =======Time ==finish=========================================================
-
-// document.getElementById("comments__date").innerText = date;
-// document.getElementById("comments__date1").innerText = date1;
-// document.getElementById("comments__date2").innerText = date2;
-
-// https://javascript.ru/forum/misc/65647-vyvod-nazvaniya-mesyaca.html  вывод названия месяца??
-
-// });
+});

@@ -33,7 +33,7 @@
 
   &__link {
     @extend %rubik-400;
-    font-size: 15px;
+    font-size: 1.1rem;
     line-height: 0.9;
     color: $link;
     padding: 0 3px 3px;
@@ -84,7 +84,7 @@
 
 .sub-menu__list > li {
   background-color: #edf1f4;
-  transition: background-color 0.3s;
+  // transition: background-color 0.3s;
 }
 
 .sub-menu__list > li:hover {
@@ -138,7 +138,7 @@
 
 .sub-sub-menu__list > li {
   background-color: #fcd7b6;
-  transition: background-color 0.3s;
+  // transition: background-color 0.1s;
 }
 
 .sub-sub-menu__list > li:hover {
@@ -440,6 +440,8 @@
     background-image: url("../images/icons/arrow-btn.svg");
     background-repeat: no-repeat;
     background-position: 75% 54%;
+    background-color: $accent;
+    border-radius: 18px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -447,7 +449,6 @@
     font-size: 15px;
     color: #fff;
     min-height: 60px;
-    background-color: $accent;
     padding: 0 100px 0 25px;
     transform: translate(-300%);
     transition: background-position-x 0.5s, transform 0.5s,
@@ -1970,6 +1971,7 @@
     }
   }
 }
+
 .tabs-comments {
   display: flex;
   &:not(:last-child) {
@@ -1991,6 +1993,7 @@
 
   &__inner-top {
     display: flex;
+    gap: 10px;
     align-items: baseline;
     justify-content: space-between;
   }
@@ -2267,6 +2270,7 @@
   &__contact-box {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
     margin-bottom: 20px;
   }
 
